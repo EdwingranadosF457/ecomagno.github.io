@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+    color: #333;
+}
+
+header {
+    background: #2c6e49;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #26532b;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px;
+    color: white;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+footer {
+    background: #26532b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* Estilos del quiz */
+#quiz {
+    text-align: center;
+    padding: 30px;
+    background: #e8f5e9;
+}
+
+.pregunta {
+    margin: 20px 0;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos de las opciones */
+.opcion {
+    display: block;
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* No cambia de color al pasar el mouse */
+.opcion:hover {
+    background: white;
+}
+
+/* Botón de verificar */
+.boton {
+    display: inline-block;
+    background: #2c6e49;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.eco-consejos {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32; /* Verde oscuro */
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.eco-consejos p {
+    margin: 20px 0;
+    padding: 10px;
+    background: #c8e6c9;
+    border-left: 8px solid #2e7d32;
+    border-radius: 5px;
+}
+
+.eco-consejos span {
+    color: #1b5e20;
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+
+.extra {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .btn + .extra {
+    display: block;
+}
