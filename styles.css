@@ -53,6 +53,9 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    display: grid;
+    min-height: 100 dvh;
+    grid-temple-rows: auto 1 fr auto;
 }
 
 #quiz {
