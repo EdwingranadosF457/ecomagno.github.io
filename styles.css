@@ -54,7 +54,7 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
-/* Estilos del quiz */
+
 #quiz {
     text-align: center;
     padding: 30px;
@@ -69,7 +69,7 @@ footer {
     margin-right: auto;
 }
 
-/* Estilos de las opciones */
+
 .opcion {
     display: block;
     background: white;
@@ -80,12 +80,12 @@ footer {
     transition: background 0.3s;
 }
 
-/* No cambia de color al pasar el mouse */
+
 .opcion:hover {
     background: white;
 }
 
-/* Botón de verificar */
+
 .boton {
     display: inline-block;
     background: #2c6e49;
