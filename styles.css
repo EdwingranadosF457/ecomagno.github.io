@@ -154,3 +154,20 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked + .btn + .extra {
     display: block;
 }
+@media (min-width: 600px) {
+  nav ul li {
+    flex: 1; /* Se alinean horizontal en pantallas grandes */
+    border-bottom: none;
+    border-right: 1px solid #fff;
+  }
+}
+
+.container {
+  padding: 1em;
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
