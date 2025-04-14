@@ -162,11 +162,6 @@ input[type="checkbox"]:checked + .btn + .extra {
   }
 }
 
-.container {
-  padding: 1em;
-  max-width: 100%;
-}
-
 .menu-circular {
   display: flex;
   flex-wrap: wrap;
