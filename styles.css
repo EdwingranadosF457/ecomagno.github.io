@@ -171,8 +171,8 @@ input[type="checkbox"]:checked + .btn + .extra {
 }
 
 .boton-circular {
-  width: 200px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   background-color: #4CAF50;
   color: white;
   border-radius: 50%;
