@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <title>En Mantenimiento</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f8f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #2e3f3f;
+    }
 
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   <link rel="stylesheet" href="styles.css">
+    .mensaje {
+      max-width: 500px;
+      padding: 2rem;
+      background-color: #e0f0e0;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .mensaje h1 {
+      font-size: 2rem;
+      color: #3b664b;
+      margin-bottom: 1rem;
+    }
+
+    .mensaje p {
+      font-size: 1.1rem;
+    }
+
+    .icono {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-
-     <header>
-      
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-               
-                <li><a href="AT.html">Actividades</a></li>
-                <li><a href="Eco.html">Eco-consejos</a></li>
-            </ul>
-        </nav>
-    </header>
-<main>
-
-        <section>
-          <iframe width="900" height="500" src="https://www.youtube.com/embed/duBY-GUZYfk" frameborder="0" allowfullscreen></iframe>
-
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Mi Sitio Web</p>
-    </footer>
+  <div class="mensaje">
+    <div class="icono">🛠️</div>
+    <h1>¡Sitio en mantenimiento!</h1>
+    <p>Estamos trabajando para mejorar tu experiencia. Por favor, vuelve pronto.</p>
+  </div>
 </body>
 </html>
+
+
