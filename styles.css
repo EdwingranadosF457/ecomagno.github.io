@@ -35,10 +35,6 @@ header p {
   color: #0e110d;
 }
 header {
-  
-  background-size: cover;
-  background-position: center;
-  height: 250px;
   color: white;
   text-align: center;
   display: flex;
