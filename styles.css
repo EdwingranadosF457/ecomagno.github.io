@@ -15,10 +15,10 @@
 }
 
 body {
-  background-image: url('estadio-parvulos.webp');
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f8f5;
+  background: url('estadio-parvulos.webp') no-repeat center center fixed;
+  background-size: cover;
   color: #242b2b;
 }
 
