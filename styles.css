@@ -14,17 +14,17 @@
   margin-bottom: 1rem;
 }
 
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f2f8f5;
   color: #242b2b;
-  
-  background-image: url('estadio-parvulos.webp');
+  background-image: url('../images/estadio-parvulos.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* opcional: hace que el fondo se quede fijo al hacer scroll */
+  background-attachment: fixed;
 }
 
 header h1 {
@@ -39,6 +39,7 @@ header p {
   font-size: 1.2rem;
   color: #0e110d;
 }
+   
 header {
   /* background: url('estadio-parvulos.webp'); */
   background-size: cover;
