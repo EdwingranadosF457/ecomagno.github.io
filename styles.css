@@ -221,6 +221,13 @@ footer {
   display: flex;
 }
 
+section {
+  transition: transform 0.3s ease;
+}
+section:hover {
+  transform: scale(1.02);
+}
+
 
  
  
