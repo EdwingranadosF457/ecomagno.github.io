@@ -14,16 +14,10 @@
 }
 
 body {   
-  background: url('estadio-parvulos.webp');
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem;
+  margin: 0;   
+  font-family: 'Segoe UI', sans-serif;   
+  background-color: #f2f8f5;   
+  color: #242b2b; 
 }
 
 html, body {
@@ -50,10 +44,17 @@ header p {
   color: #0e110d;
 }
 header {
-  margin: 0;   
-  font-family: 'Segoe UI', sans-serif;   
-  background-color: #f2f8f5;   
-  color: #242b2b; 
+  background: url('estadio-parvulos.webp');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+
 }
 
 
