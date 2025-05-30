@@ -44,13 +44,13 @@ header {
 header h1 {
   font-size: 2.5rem;
   margin: 0;
-  text-shadow: 1px 1px 4px rgba(5, 240, 95, 0.5);
+  text-shadow: 1px 1px 4px rgba(13, 32, 20, 0.5);
 }
 
 header p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
-  text-shadow: 1px 1px 4px rgba(5, 240, 95, 0.5);
+  text-shadow: 1px 1px 4px rgba(28, 56, 39, 0.5);
 }
 
 nav {
@@ -101,52 +101,51 @@ footer {
   margin-top: 2rem;
 }
 
-#acordeon, #eco-consejos {
-  margin: 3rem auto;
-  max-width: 800px;
-  padding: 2rem;
+.consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.consejo-box {
   background-color: #e8f5e9;
+  border: 2px solid #c8e6c9;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(60, 100, 80, 0.1);
-}
-
-#eco-consejos h2 {
-  text-align: center;
-  color: #2f5f4f;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.acordeon details {
-  background-color: #a5d6a7;
-  margin-bottom: 1rem;
   padding: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.acordeon details[open] {
-  background-color: #81c784;
+.consejo-box:hover {
+  transform: translateY(-5px);
+  background-color: #d0f0c0;
 }
 
-.acordeon summary {
+details summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: bold;
   font-size: 1.1rem;
-  list-style: none;
-  outline: none;
+  cursor: pointer;
+  color: #1b5e20;
 }
 
-.acordeon p {
-  margin-top: 1rem;
-  background-color: #ffffff;
-  padding: 1rem;
-  border-left: 5px solid #66bb6a;
-  border-radius: 8px;
+details p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2e4d3b;
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 
-/* Estilo para contenedor horizontal */
+
 .actividad-contenedor {
   display: flex;
   justify-content: center;
@@ -183,45 +182,460 @@ footer {
 }
 
 
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+
+
+
+
+.robot-img {
+  width: 250px;
+  margin-right: 2rem;
+}
+
+.intro .texto {
+  max-width: 500px;
+}
+
+.juego {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contenedor-juego {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.objeto-basura {
+  width: 80px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.objeto-basura:hover {
+  transform: scale(1.1);
+}
+
+.zona-basura {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #d0f0dc;
+  border-radius: 12px;
+}
+
+.caneca {
+  width: 140px;
+  padding: 1rem;
+  background-color: #b2dfdb;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.caneca img {
+  width: 100px;
+}
+
+.boton-jugar {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-jugar:hover {
+  background-color: #388e3c;
+}
+
+/* Juego */
+.juego-container {
+  background-color: #e0f7ea;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 900px;
+}
+
+.zona-juego {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.objeto-basura {
+  width: 80px;
+  margin: 1rem;
+  cursor: grab;
+}
+
+.caneca-drop {
+  width: 100px;
+  height: 120px;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f8f5;
+  margin: 0;
+  color: #242b2b;
+}
+
+header {
+  background-color: #c1f0dc;
+  padding: 1.5rem;
+  text-align: center;
+  color: #2f5f4f;
+}
+
+h1, h2 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: #2f5f4f;
+}
+
+#presentacion-magnobot {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.info-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #e0f7ea;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.img-robot {
+  width: 200px;
+  height: auto;
+}
+
+.texto-info {
+  max-width: 500px;
+}
+
+#jugar-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#jugar-btn:hover {
+  background-color: #388e3c;
+}
+
+#juego-magnobot {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background-color: #e8f5e9;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(60, 100, 80, 0.1);
+}
+
+.juego-contenedor {
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+#zona-basura img {
+  width: 80px;
+  margin: 0 10px;
+  cursor: grab;
 }
 
-.lightbox:target {
+#caneca {
+  font-size: 4rem;
+  background-color: #a5d6a7;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+/* Tu estilo existente + añadidos */
+.boton-jugar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 1rem;
+}
+
+.boton-jugar:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.robot-img {
+  max-width: 250px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.modal {
+  background-color: #eaf7ea;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.oculto {
+  display: none;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2d5d4d;
+  cursor: pointer;
+}
+
+.contenedor-basura {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.objeto-basura {
+  width: 80px;
+  cursor: grab;
+}
+
+.caneca-img {
+  width: 120px;
+  margin-top: 1rem;
 }
 
 
+/* Fuente decorativa */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
+.robot-info {
+  background-color: #e0f7ea;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  font-family: 'Fredoka', sans-serif;
+}
 
+.robot-contenido {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
+.robot-imagen {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
 
+.robot-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 128, 96, 0.2);
+}
 
+.robot-texto {
+  flex: 2;
+}
 
+.robot-texto h2 {
+  font-size: 2.8rem;
+  color: #1f4d3d;
+  text-shadow: 1px 1px 4px rgba(0, 100, 80, 0.2);
+  margin-bottom: 1rem;
+}
 
+.robot-texto ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #234236;
+}
 
- 
- 
+.robot-texto ul li::before {
+  content: "✅ ";
+  color: #2e7d32;
+}
 
-  
+.btn-container {
+  margin-top: 1.5rem;
+}
 
- 
- 
+.boton-jugar {
+  padding: 0.8rem 1.6rem;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+}
 
-  
+.boton-jugar:hover {
+  background-color: #43a047;
+}
+.icono {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.galeria {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #f0fdf4;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.galeria-titulo {
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.galeria-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.galeria-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.galeria-imagenes img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+.flecha {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: #2e7d32;
+}
+
+.seccion-galeria {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.galeria-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.galeria-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.galeria-imagenes img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.boton-galeria {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-galeria:hover {
+  background-color: #388E3C;
+}
