@@ -14,46 +14,58 @@
   <nav>
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="V.html">Magno</a></li>
-      <li><a href="AT.html">Actividades</a></li>
+      <li><a href="v.html">Magno</a></li>
+      <li><a href="actividades.html">Actividades</a></li>
       <li><a href="Eco.html">Eco-Consejos</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h2 style="text-align: center; margin-bottom: 2rem;">💧 Día del Agua</h2>
+<section class="galeria">
+  <h2 class="galeria-titulo">Dia del agua</h2>
+  <div class="galeria-contenedor">
+  <button onclick="moverGaleria(-1)">⬅️</button>
+  <div class="galeria-imagenes" id="galeriaImagenes">
+    <img src="img1.jpeg" alt="Imagen 1">
+    <img src="img2.jpeg" alt="Imagen 2">
+    <img src="img3.jpeg" alt="Imagen 3">
+    <img src="img4.jpeg" alt="Imagen 4">
+    <img src="img5.jpeg" alt="Imagen 5">
+    <img src="img6.jpeg" alt="Imagen 6">
+    <img src="img7.jpeg" alt="Imagen 7">
+    <img src="img8.jpeg" alt="Imagen 8">
+    <img src="img9.jpeg" alt="Imagen 9">
 
-    <div class="actividad-contenedor">
-        <section class="actividad">
-          <h3>👶 Preescolar</h3>
-          <a href="#img1"><img src="at.p3.jpeg" alt="Preescolar" class="actividad-img"></a>
-        </section>
-      
-        <section class="actividad">
-          <h3>🏗 Maquetas</h3>
-          <a href="#img2"><img src="concurso.jpeg" alt="Maquetas" class="actividad-img"></a>
-        </section>
-      
-        <section class="actividad">
-          <h3>🌧 Palo de lluvia</h3>
-          <a href="#img3"><img src="palode.jpeg" alt="Palo de lluvia" class="actividad-img"></a>
-        </section>
-      </div>
-      
-      <div id="img1" class="lightbox">
-        <a href="#"><img src="at.p3.jpeg" alt="Preescolar Ampliado"></a>
-      </div>
-      
-      <div id="img2" class="lightbox">
-        <a href="#"><img src="concurso.jpeg" alt="Maqueta Ampliada"></a>
-      </div>
-      
-      <div id="img3" class="lightbox">
-        <a href="#"><img src="palode.jpeg" alt="Palo de lluvia Ampliado"></a>
-      </div>
-      
-  </main>
-</body>
+
+  </div>
+  <button onclick="moverGaleria(1)">➡️</button>
+</div>
+
+  </div>
+
+
+
+<script>
+  let indice = 0;
+
+  function moverGaleria(direccion) {
+    const galeria = document.getElementById("galeriaImagenes");
+    const imagenes = galeria.querySelectorAll("img");
+    const visible = 3; 
+    const imagenAncho = imagenes[0].offsetWidth + 10;
+
+    indice += direccion;
+
+    const maxIndice = imagenes.length - visible;
+    if (indice < 0) indice = 0;
+    if (indice > maxIndice) indice = maxIndice;
+
+    galeria.style.transform = `translateX(-${indice * imagenAncho}px)`;
+  }
+
+  window.addEventListener("resize", () => moverGaleria(0));
+</script>
+
+</body></section>
 </html>
 
 
