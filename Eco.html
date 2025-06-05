@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Eco-Consejos - Ecomagno</title>
+  <title>Eco-Consejos - Saving the Environment</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,72 +13,63 @@
   <nav>
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="V.html">Magno</a></li>
+      <li><a href="V.html">FedeMagno</a></li>
       <li><a href="AT.html">Actividades</a></li>
       <li><a href="Eco.html">Eco-Consejos</a></li>
     </ul>
   </nav>
 
-  <main>
-  <section id="eco-consejos">
-    <h2>♻️ Eco-Consejos Interactivos</h2>
+ <section id="eco-consejos" class="accordion-section">
+  <h2>Eco-Consejos para Cuidar Nuestro Planeta</h2>
 
-    <div class="consejos-grid">
-      <div class="consejo-box">
-        <details>
-          <summary>
-            <img src="planta.jpg" alt="Planta" class="icono">
-            🌱 Planta tu propia planta
-          </summary>
-          <p>Adopta una planta en casa o en el salón. Ayuda a purificar el aire y mejora el ánimo.</p>
-        </details>
-      </div>
+  <div class="eco-titles-list">
 
-      <div class="consejo-box">
-        <details>
-          <summary>
-            <img src="plastico.jpg" alt="Plástico" class="icono">
-            🚯 Reduce el uso de plásticos
-          </summary>
-          <p>Usa botellas y envases reutilizables. ¡Dile adiós a los desechables!</p>
-        </details>
-      </div>
-      <div class="consejo-box">
-        <details>
-          <summary>
-            <img src="desconectar.jpg" alt="Energía" class="icono">
-            🔌 Desconecta lo que no uses
-          </summary>
-          <p>Apagar luces y cargadores ahorra energía. Es un pequeño gesto con gran impacto.</p>
-        </details>
-      </div>
-      <div class="consejo-box">
-        <details>
-          <summary>
-            <img src="images.jpg" alt="Reciclaje" class="icono">
-            ♻️ Clasifica los residuos
-          </summary>
-          <p>Separa papel, plástico, orgánicos y no reciclables. Respeta los colores de las canecas.</p>
-        </details>
-      </div>
-
-      <div class="consejo-box">
-        <details>
-          <summary>
-            <img src="cami.jpg" alt="Bici" class="icono">
-            🌿 Usa transporte eco-amigable
-          </summary>
-          <p>Caminar, ir en bicicleta o usar transporte público reduce la contaminación y el uso de combustibles fósiles.</p>
-        </details>
-      </div>
-
-      
+    <input type="checkbox" id="consejo1" class="accordion-checkbox" hidden>
+    <label for="consejo1" class="accordion-label">Reduce el uso de plástico</label>
+    <div class="accordion-content">
+      <p>Evita las botellas y bolsas de plástico de un solo uso. Opta por materiales reutilizables como bolsas de tela y botellas de acero inoxidable.</p>
     </div>
-  </section>
+
+    <input type="checkbox" id="consejo2" class="accordion-checkbox" hidden>
+    <label for="consejo2" class="accordion-label">Ahorrar agua</label>
+    <div class="accordion-content">
+      <p>Cierra el grifo mientras te cepillas los dientes y repara fugas. Usa la lavadora y lavavajillas solo cuando estén llenos.</p>
+    </div>
+
+    <input type="checkbox" id="consejo3" class="accordion-checkbox" hidden>
+    <label for="consejo3" class="accordion-label">Usa transporte sostenible</label>
+    <div class="accordion-content">
+      <p>Camina, usa la bicicleta o el transporte público para reducir la emisión de gases contaminantes y mejorar la calidad del aire.</p>
+    </div>
+
+    <input type="checkbox" id="consejo4" class="accordion-checkbox" hidden>
+    <label for="consejo4" class="accordion-label">Recicla correctamente</label>
+    <div class="accordion-content">
+      <p>Separa los residuos en orgánicos, plásticos, vidrio y papel. Aprende qué materiales pueden reciclarse en tu comunidad.</p>
+    </div>
+
+    <input type="checkbox" id="consejo5" class="accordion-checkbox" hidden>
+    <label for="consejo5" class="accordion-label">Planta árboles y cultiva plantas</label>
+    <div class="accordion-content">
+      <p>Los árboles ayudan a limpiar el aire y proporcionan hábitats para la fauna. Crea tu pequeño jardín o participa en jornadas de siembra.</p>
+    </div>
+
+    <input type="checkbox" id="consejo6" class="accordion-checkbox" hidden>
+    <label for="consejo6" class="accordion-label">Ahorra energía</label>
+    <div class="accordion-content">
+      <p>Apaga las luces y aparatos electrónicos cuando no los uses. Prefiere bombillas LED y electrodomésticos eficientes.</p>
+    </div>
+
+  </div>
+</section>
+
+
 </main>
 
 </body>
-</html>
+
+  
+
 
   
 
