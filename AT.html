@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Actividades - Ecomango</title>
+  <title>Actividades - Saving the environment</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,59 +14,61 @@
   <nav>
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="V.html">Magno</a></li>
-      <li><a href="AT.html">Actividades</a></li>
+      <li><a href="v.html">FedeMagno</a></li>
+      <li><a href="actividades.html">Actividades</a></li>
       <li><a href="Eco.html">Eco-Consejos</a></li>
     </ul>
   </nav>
 
-<section class="galeria">
-  <h2 class="galeria-titulo">Dia del agua</h2>
-  <div class="galeria-contenedor">
-  <button onclick="moverGaleria(-1)">⬅️</button>
-  <div class="galeria-imagenes" id="galeriaImagenes">
-    <img src="img1.jpeg" alt="Imagen 1">
-    <img src="img2.jpeg" alt="Imagen 2">
-    <img src="img3.jpeg" alt="Imagen 3">
-    <img src="img4.jpeg" alt="Imagen 4">
-    <img src="img5.jpeg" alt="Imagen 5">
-    <img src="img6.jpeg" alt="Imagen 6">
-    <img src="img7.jpeg" alt="Imagen 7">
-    <img src="img8.jpeg" alt="Imagen 8">
-    <img src="img9.jpeg" alt="Imagen 9">
+<section class="cronograma-fotos">
+  <h2>📅 Cronograma de Actividades Ambientales</h2>
+
+  <div class="fila-actividades">
+
+    <div class="actividad">
+      <h3>🌊 Día Mundial del Agua </h3>
+      <div class="galeria">
+        <img src="img1.jpeg" alt="Agua 1">
+        <img src="img2.jpeg" alt="Agua 2">
+        <img src="img3.jpeg" alt="Agua 3">
+        <img src="img4.jpeg" alt="Agua 4">
+        <img src="img5.jpeg" alt="Agua 5">
+        <img src="img6.jpeg" alt="Agua 6">
+        <img src="img7.jpeg" alt="Agua 7">
+        <img src="img8.jpeg" alt="Agua 8">
+        <img src="img9.jpeg" alt="Agua 9">
+      </div>
+    </div>
+
+    
+    <div class="actividad">
+      <h3> Día de ..</h3>
+      <p>...</p>
+      <div class="galeria">
+        <img src="img/tierra1.jpg" alt=" 1">
+        <img src="img/tierra2.jpg" alt=" 2">
+        <img src="img/tierra3.jpg" alt=" 3">
+        <img src="img/tierra4.jpg" alt="4">
+        <img src="img/tierra5.jpg" alt="5">
+      </div>
+    </div>
+
+  </div> 
+
+</section>
 
 
-  </div>
-  <button onclick="moverGaleria(1)">➡️</button>
-</div>
-
-  </div>
-
-
-
-<script>
-  let indice = 0;
-
-  function moverGaleria(direccion) {
-    const galeria = document.getElementById("galeriaImagenes");
-    const imagenes = galeria.querySelectorAll("img");
-    const visible = 3; 
-    const imagenAncho = imagenes[0].offsetWidth + 10;
-
-    indice += direccion;
-
-    const maxIndice = imagenes.length - visible;
-    if (indice < 0) indice = 0;
-    if (indice > maxIndice) indice = maxIndice;
-
-    galeria.style.transform = `translateX(-${indice * imagenAncho}px)`;
-  }
-
-  window.addEventListener("resize", () => moverGaleria(0));
-</script>
+  
+</section>
 
 </body></section>
 </html>
+
+
+
+
+  
+
 
 
 
