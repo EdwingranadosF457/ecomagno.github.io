@@ -4,6 +4,15 @@ const Ecoconsejo = [
   "Camina, usa la bicicleta o el transporte público para reducir la emisión de gases contaminantes y mejorar la calidad del aire.",
   "Separa los residuos en orgánicos, plásticos, vidrio y papel. Aprende qué materiales pueden reciclarse en tu comunidad.",
   "Los árboles ayudan a limpiar el aire y proporcionan hábitats para la fauna.",
+  "No tires, reutiliza: ¡una botella, mil usos!",
+  "Dale una segunda vida a tus objetos",
+  "Reciclar es un acto de amor por el planeta.",
+  "La basura de hoy, puede ser la energía del mañana.",
+  "Recuperar es dar una nueva oportunidad a lo que creíamos perdido.",
+  "La recuperación es el último paso para cerrar el círculo.",
+  "Reduce el uso de papel. Utiliza documentos digitales y envía correos electrónicos.",
+  "Ahorra agua: toma duchas más cortas.",
+  "Compra solo lo necesario, reduce el consumo innecesario",
   "Apaga las luces y aparatos electrónicos cuando no los uses. Prefiere bombillas LED y electrodomésticos eficientes."
 ];
 
