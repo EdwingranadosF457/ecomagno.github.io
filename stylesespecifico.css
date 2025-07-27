@@ -1,0 +1,324 @@
+/* ========== FUENTES ========== */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;900&display=swap');
+
+/* ========== RESET BÁSICO ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f8f5;
+  color: #242b2b;
+}
+
+/* ========== HEADER Y NAV ========== */
+header {
+  background-image: url('at.p3.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2f5f4f;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 4px rgba(35, 117, 65, 0.5);
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(6, 10, 8, 0.5);
+  margin-top: 0.5rem;
+}
+
+nav {
+  background-color: #CDE8A9;
+  padding: 1rem 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4d6655;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #a4daa8;
+}
+
+/* ========== SECCIONES GENERALES ========== */
+section {
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #CDE8A9;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #3e5544;
+  margin-top: 2rem;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ========== SECCIÓN DE ROBOT - FEDEMAGNO ========== */
+.robot-info {
+  background-color: #e0f7ea;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.robot-contenido {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.robot-imagen {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.robot-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 128, 96, 0.2);
+}
+
+.robot-texto {
+  flex: 2;
+}
+
+.robot-texto h2 {
+  font-size: 2.8rem;
+  color: #1f4d3d;
+  text-shadow: 1px 1px 4px rgba(0, 100, 80, 0.2);
+  margin-bottom: 1rem;
+}
+
+.robot-texto ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #234236;
+}
+
+.robot-texto ul li::before {
+  content: "✅ ";
+  color: #2e7d32;
+}
+
+/* ========== BOTÓN DE JUEGO ========== */
+#jugar-btn,
+.boton-jugar {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 1rem;
+}
+
+#jugar-btn:hover,
+.boton-jugar:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* ========== JUEGO FEDEMAGNO ========== */
+#juego-magnobot {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background-color: #e8f5e9;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(60, 100, 80, 0.1);
+}
+
+.juego-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.zona-basura {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #d0f0dc;
+  border-radius: 12px;
+}
+
+.objeto-basura {
+  width: 80px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.objeto-basura:hover {
+  transform: scale(1.1);
+}
+
+.zona-canecas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.caneca {
+  width: 140px;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: white;
+  font-weight: bold;
+}
+
+/* ========== MODAL ========== */
+.modal {
+  background-color: #eaf7ea;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.oculto {
+  display: none;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2d5d4d;
+  cursor: pointer;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .fila-actividades .actividad {
+    flex: 1 1 100%;
+  }
+
+  .juego-contenedor {
+    flex-direction: column;
+  }
+
+  .zona-canecas {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+/* ========== NUEVO ESTILO JUEGO MULTICANECA ========== */
+
+#vidas {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #d32f2f;
+  font-size: 1.2rem;
+}
+
+/* Estilo para canecas de colores */
+.caneca.gris {
+  background-color: #7d7d7d;
+}
+
+.caneca.azul {
+  background-color: #2c79c3;
+}
+
+.caneca.verde {
+  background-color: #43a047;
+}
+
+/* Posición de basura debajo de las canecas */
+.contenedor-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.zona-canecas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.zona-basura {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #d0f0dc;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+/* Estilo para mensaje de felicitación o derrota */
+.felicitacion,
+.perdida {
+  margin-top: 2rem;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border: 2px solid #ffeeba;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-inline: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perdida {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
