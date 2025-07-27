@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>FederEco - Ecomagno</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FedeMagno - Ecomagno</title>
+    <link rel="stylesheet" href="stylesespecifico.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Ecomagno</h1>
+    </header>
 
-</head>
-<body>
-  <header>
-    <h1>Ecomagno</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="V.html">FederEco</a></li>
-      <li><a href="AT.html">Actividades</a></li>
-      <li><a href="Eco.html">Eco-Consejos</a></li>
-    </ul>
-  </nav>
-
- <section class="robot-info">
-  <div class="robot-contenido">
-    <div class="robot-imagen">
-      <img src="img/caneca.png" alt="MagnoBot recogiendo basura" class="robot-img">
-    </div>
-    <div class="robot-texto">
-      <h2>🌟 ¡Conoce a FederEco !</h2>
+    <nav>
       <ul>
-        <strong>FederEco</strong> es nuestro robot ecológico, ¡y llegó para quedarse!
-        <li>FederEco es un robot ecológico que ha llegado a nuestra institución para convertirse en el mejor aliado del cuidadao ambiental en nuestra institucion.</li>
-      <button id="jugar-btn" class="boton-jugar">¡Jugar con FederEco!</button>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="V.html">FedeMagno</a></li>
+        <li><a href="AT.html">Actividades</a></li>
+        <li><a href="Eco.html">Eco-Consejos</a></li>
       </ul>
+    </nav>
 
-<section id="juego-magnobot" style="display: none;">
-      <h2>Ayuda a FederEco a reciclar</h2>
-      <p>Puntos: <span id="puntos">0</span></p>
-
-      <div class="juego-contenedor">
-        <div id="zona-basura">
-          <img src="img/papel.png" id="papel" class="objeto-basura" draggable="true" alt="Papel">
-          <img src="img/botella.png" id="botella" class="objeto-basura" draggable="true" alt="Botella">
-          <img src="img/banana.png" id="banana" class="objeto-basura" draggable="true" alt="Cáscara de banana">
+    <section class="robot-info">
+      <div class="robot-contenido">
+        <div class="robot-imagen">
+          <img src="img/caneca.png" alt="MagnoBot recogiendo basura" class="robot-img" />
         </div>
-
-        <div id="caneca">
-          🗑️
+        <div class="robot-texto">
+          <h2>🌟 ¡Conoce a FedeMagno!</h2>
+          <p><strong>FedeMagno</strong> es nuestro robot ecológico, ¡y llegó para quedarse!</p>
+          <ul>
+            <li>FedeMagno es un robot ecológico que ha llegado a nuestra institución para convertirse en el mejor aliado del cuidado ambiental.</li>
+          </ul>
+          <button id="jugar-btn" class="boton-jugar">¡Jugar con FedeMagno!</button>
         </div>
       </div>
     </section>
-  </main>
 
-  <script src="juego.js"></script>
-</body>
+    <section id="juego-magnobot" style="display: none;">
+      <h2>Ayuda a FedeMagno a reciclar</h2>
+      <p>Puntos: <span id="puntos">0</span></p>
+      <p>Vidas: <span id="vidas">3</span></p>
+
+      <div class="juego-contenedor">
+        <!-- Zona de canecas -->
+        <div class="zona-canecas">
+          <div id="caneca-papel" class="caneca" data-tipo="papel" style="background-color: blue;">
+            🧻 Papel y Cartón
+          </div>
+          <div id="caneca-plastico" class="caneca" data-tipo="plastico" style="background-color: green;">
+            🥤 Plástico
+          </div>
+          <div id="caneca-no" class="caneca" data-tipo="no-reciclable" style="background-color: gray;">
+            🗑️ No reciclable
+          </div>
+        </div>
+
+        <!-- Zona de basura -->
+        <div id="zona-basura">
+          <!-- Desechos se agregan dinámicamente desde JS -->
+        </div>
+      </div>
+    </section>
+
+    <script src="juego.js"></script>
+  </body>
 </html>
-</section>
-
-
-
-
-
-
-
-
-
-
