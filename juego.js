@@ -104,3 +104,4 @@ function mostrarGameOver() {
 }
 
 // Iniciar juego
+mostrarDesechos();
