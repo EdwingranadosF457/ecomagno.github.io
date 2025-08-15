@@ -70,3 +70,11 @@
 .reverso {
     background-color: #ffffff;
 }
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* Ajusta columnas */
+    gap: 15px;
+    justify-content: center; /* Esto lo centra horizontal */
+    margin: 0 auto; /* Esto también ayuda */
+}
