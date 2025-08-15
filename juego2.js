@@ -5,7 +5,7 @@ let cartas = [
     "img/basura.png", "img/basura.png",
     "img/Banana2.png", "img/Banana2.png",
     "img/Desores.png", "img/Desores.png",
-    "img/Fabrica.png", "img/Fabrica.png"
+    "img/Fabrica.png", "img/Fabrica.png",
     "img/CO2.png", "img/CO2.png",
     "img/AS.png", "img/AS.png"
 ];
