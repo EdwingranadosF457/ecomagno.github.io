@@ -78,3 +78,19 @@
     justify-content: center; /* Esto lo centra horizontal */
     margin: 0 auto; /* Esto también ayuda */
 }
+
+/* Contenedor principal: centra el tablero */
+.juego-container {
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+    min-height: 100vh;       /* ocupa toda la pantalla */
+}
+
+/* Tablero de cartas */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 columnas */
+    grid-template-rows: repeat(4, 100px);    /* 4 filas */
+    gap: 15px; /* espacio entre cartas */
+}
