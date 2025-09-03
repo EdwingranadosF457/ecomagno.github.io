@@ -7,8 +7,6 @@ document.getElementById("jugar-btn").addEventListener("click", function () {
 let puntos = 0;
 let vidas = 3;
 let recolectados = [];
-let rondasCompletadas = 0;
-const rondasMeta = 3;
 
 const desechos = [
   { id: 'papel', tipo: 'papel', src: 'img/papel.png', alt: 'Papel' },
@@ -61,6 +59,11 @@ document.querySelectorAll('.caneca').forEach(caneca => {
     if (tipoBasura === tipoCaneca) {
       puntos++;
       recolectados.push(id);
+
+      if (puntos >= 10) {
+        mostrarFelicitacion();
+        return;
+      }
     } else {
       vidas--;
       document.getElementById('vidas').textContent = vidas;
@@ -73,16 +76,9 @@ document.querySelectorAll('.caneca').forEach(caneca => {
 
     document.getElementById('puntos').textContent = puntos;
 
-    // Si recolectó los 3 objetos correctamente o no, siempre repoblar
+    // Si no quedan objetos, generar nuevos
     if (document.querySelectorAll('.objeto-basura').length === 0) {
       recolectados = [];
-      rondasCompletadas++;
-
-      if (rondasCompletadas === rondasMeta) {
-        mostrarFelicitacion();
-        return;
-      }
-
       setTimeout(mostrarDesechos, 1000);
     }
   });
@@ -92,13 +88,36 @@ document.querySelectorAll('.caneca').forEach(caneca => {
 function mostrarFelicitacion() {
   const mensaje = document.createElement("div");
   mensaje.classList.add("felicitacion");
-  mensaje.innerHTML = "🎉 <strong>¡Felicitaciones!</strong> FedeMagno está muy feliz porque lo ayudaste a limpiar todas las rondas. 🌱";
+  mensaje.innerHTML = "🎉 <strong>¡Felicitaciones!</strong> FedeMagno está muy feliz porque lo ayudaste a recolectar 10 objetos correctamente. 🌱";
   document.getElementById("juego-magnobot").appendChild(mensaje);
 }
 
 function mostrarGameOver() {
+  zonaBasura.innerHTML = '';
   const mensaje = document.createElement("div");
-  mensaje.classList.add("felicitacion");
-  mensaje.innerHTML = "💔 <strong>¡Oh no!</strong> Te quedaste sin vidas. Inténtalo de nuevo.";
+  mensaje.classList.add("perdida");
+  mensaje.innerHTML = `
+    💔 <strong>¡Oh no!</strong> Te quedaste sin vidas. Inténtalo de nuevo.
+    <br><br>
+    <button id="reiniciar-btn" class="boton-jugar">Reintentar</button>
+  `;
   document.getElementById("juego-magnobot").appendChild(mensaje);
+
+  document.getElementById("reiniciar-btn").addEventListener("click", reiniciarJuego);
 }
+
+function reiniciarJuego() {
+  puntos = 0;
+  vidas = 3;
+  recolectados = [];
+
+  zonaBasura.innerHTML = '';
+  document.querySelectorAll('.felicitacion, .perdida').forEach(el => el.remove());
+
+  document.getElementById('puntos').textContent = puntos;
+  document.getElementById('vidas').textContent = vidas;
+
+  mostrarDesechos();
+}
+// Iniciar juego
+mostrarDesechos();
