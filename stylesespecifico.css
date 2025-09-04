@@ -15,7 +15,7 @@ header {
   background-image: url('at.p3.jpeg');
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -326,6 +326,7 @@ main {
 
   padding: 15px 25px;
 }
+
 
 
 
