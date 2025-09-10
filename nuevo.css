@@ -1,0 +1,570 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo-img {
+  height: 68px; 
+  width: auto;
+  display: block;
+}
+
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+
+
+
+
+
+
+
+/* Header y Footer */
+header, footer {
+  background: #54d199;
+  color: white;
+}
+
+
+
+/* Links del menú */
+.menu li a {
+  color: #f1faee;
+}
+
+.menu li a:hover {
+  color: #54d199;
+}
+
+/* Boton color*/
+.card button {
+  background: #54d199;
+}
+
+.card button:hover {
+  background: #54d199;
+}
+
+
+.eco-caneca {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  animation: float 3s infinite ease-in-out;
+}
+
+
+
+
+/* Animación flotando */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Texto del eco-consejo */
+.eco-texto {
+  font-size: 0.9em;
+  color: #2d6a4f;
+  background: #d8f3dc;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+/* Imagen de la caneca */
+.caneca-img {
+  width: 200px;
+  height: auto;
+  animation: float 3s infinite ease-in-out;
+  display: block;
+  margin: 0 auto 10px;
+}
+/* ==== Hero ==== */
+.hero {
+  background: url("at.p3.jpeg") no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  background: #54d199;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-hero:hover {
+  background: #44a87b;
+}
+
+
+.destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.card-destacado {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-destacado:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-destacado img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.card-destacado h3 {
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+/* Header */
+.header-federeco {
+  background: #54d199;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.header-federeco .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-federeco .logo img {
+  height: 65px;
+}
+
+.header-federeco h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.header-federeco .menu ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.header-federeco .menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+}
+
+.header-federeco .menu li a:hover {
+  color: #95d5b2;
+  border-bottom: 2px solid #95d5b2;
+}
+
+.header-federeco .menu li a.activo {
+  color: #52b788;
+  font-weight: bold;
+  border-bottom: 2px solid #52b788;
+}
+
+/* Presentación de Federeco */
+.federeco-presentacion {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.federeco-presentacion img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.federeco-texto h2 {
+  color: #1b4332;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.federeco-texto p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #2d2d2d;
+}
+
+/* Beneficios */
+.federeco-beneficios {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.federeco-beneficios h2 {
+  color: #1b4332;
+  font-size: 1.9em;
+  margin-bottom: 30px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.beneficio-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #52b788;
+  font-size: 1em;
+  text-align: left;
+}
+
+/* Juegos */
+.federeco-juegos {
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.federeco-juegos h2 {
+  color: #1b4332;
+  font-size: 1.9em;
+  margin-bottom: 15px;
+}
+
+.federeco-juegos p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.juegos-container {
+  border: 3px dashed #74c69d;
+  border-radius: 15px;
+  padding: 50px;
+  background: #f8fff9;
+  font-style: italic;
+  color: #555;
+}
+ 
+.hojas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* No molesta el contenido */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hoja {
+  position: absolute;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  background: #52b788;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation: caer linear infinite;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.federeco-page {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Tarjetas */
+.galeria-secciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.seccion-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.seccion-card:hover {
+  transform: translateY(-5px);
+}
+
+.seccion-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.seccion-card .contenido {
+  padding: 1rem;
+  text-align: center;
+}
+
+.seccion-card h3 {
+  margin: 0.5rem 0;
+  color: #1b4332;
+}
+
+.seccion-card p {
+  font-size: 0.95rem;
+  color: #2d6a4f;
+}
+
+/* ===== Mini página modal ===== */
+.mini-pagina {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.mini-contenido {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: aparecer 0.3s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.mini-contenido h2 {
+  text-align: center;
+  color: #1b4332;
+  margin-top: 0;
+}
+
+.descripcion {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2d6a4f;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Botón de cerrar (esquina arriba a la derecha) */
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: #2d6a4f;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.cerrar:hover {
+  color: #d00000;
+}
+
+/* ===== Fondo ambiental con cuadrícula verde ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #e9f7ef; /* Verde muy claro */
+  background-image: 
+    linear-gradient(90deg, rgba(72, 201, 176, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(72, 201, 176, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px; /* Tamaño de las figuras */
+}
+
+
+
+/* === Estilos solo para la página de Ecovideos === */
+
+/* Sección de presentación Ecovideos */
+.presentacion {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.presentacion h1 {
+  font-size: 2.5em;
+  color: #2d6a4f;
+}
+
+.presentacion p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Galería de videos */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.video-card h3 {
+  margin: 15px 0 10px;
+  color: #1b4332;
+}
+
+.video-card p {
+  padding: 0 15px 20px;
+  font-size: 0.95em;
+  color: #444;
+}
