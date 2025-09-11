@@ -56,7 +56,7 @@ header nav {
 
 
 /* Header y Footer */
-header, footer {
+header, footer, .header-federeco {
   background: #2E8C35;
   color: white;
 }
@@ -568,6 +568,7 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
 
 
