@@ -59,7 +59,7 @@ header nav {
 
 /* Header y Footer */
 header, footer {
-  background: #54d199;
+  background: #3FBF48;
   color: white;
 }
 
@@ -570,4 +570,5 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
