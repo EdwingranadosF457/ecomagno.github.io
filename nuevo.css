@@ -1,3 +1,5 @@
+
+
 /* Reset básico */
 * {
   margin: 0;
@@ -8,7 +10,7 @@
 /* Estilo general */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #f5f7fa;
+  background: #3FBF48;
   color: #333;
   line-height: 1.6;
 }
@@ -568,3 +570,4 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
