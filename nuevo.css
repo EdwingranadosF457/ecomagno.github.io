@@ -57,7 +57,7 @@ header nav {
 
 /* Header y Footer */
 header, footer, .header-federeco {
-  background: #2E8C35;
+  background: #8ce492;
   color: white;
 }
 
@@ -151,7 +151,7 @@ header, footer, .header-federeco {
 }
 
 .btn-hero {
-  background: #2E8C35;
+  background: #8ce492;
   color: white;
   padding: 12px 25px;
   border-radius: 30px;
@@ -200,7 +200,7 @@ header, footer, .header-federeco {
 
 /* Header */
 .header-federeco {
-  background: #2E8C35;
+  background: #8ce492;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -568,6 +568,7 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
 
 
