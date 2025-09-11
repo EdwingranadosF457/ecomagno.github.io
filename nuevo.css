@@ -10,15 +10,12 @@
 /* Estilo general */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #3FBF48;
-  color: #333;
+  background: #2E8C35;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #3FBF48;
-  color: white;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -60,7 +57,7 @@ header nav {
 
 /* Header y Footer */
 header, footer {
-  background: #3FBF48;
+  background: #2E8C35;
   color: white;
 }
 
@@ -571,6 +568,7 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
 
 
