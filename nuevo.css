@@ -24,7 +24,7 @@ header {
 
 
 .logo-img {
-  height: 80px; 
+  height: 100px; 
   width: auto;
   display: block;
 }
@@ -568,6 +568,7 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
 
 
