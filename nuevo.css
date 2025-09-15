@@ -23,7 +23,7 @@ header {
 }
 
 
-.Logo Federeco  {
+.logo-img  {
   height: 100px; 
   width: 100px;
   display: block;
@@ -568,6 +568,7 @@ body {
   font-size: 0.95em;
   color: #444;
 }
+
 
 
 
