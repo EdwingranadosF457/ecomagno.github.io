@@ -1,6 +1,11 @@
 @media (max-width: 600px) {
-    .federeco-presentacion{
+  .federeco-presentacion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+    border-radius: 20px;
+    margin: 40px auto;
     max-width: 368px;
-    }
-
 }
