@@ -2,10 +2,11 @@
   .federeco-presentacion {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 60px 20px;
+    padding: 20px 10px;
     background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
     border-radius: 20px;
     margin: 40px auto;
     max-width: 368px;
+  }
+
 }
