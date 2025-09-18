@@ -48,20 +48,11 @@ header nav {
   transition: color 0.3s;
 }
 
-
-
-
-
-
-
-
 /* Header y Footer */
 header, footer, .header-federeco {
   background: #8ce492;
   color: white;
 }
-
-
 
 /* Links del menú */
 .menu li a {
@@ -89,9 +80,6 @@ header, footer, .header-federeco {
   text-align: center;
   animation: float 3s infinite ease-in-out;
 }
-
-
-
 
 /* Animación flotando */
 @keyframes float {
@@ -163,7 +151,6 @@ header, footer, .header-federeco {
 .btn-hero:hover {
   background: #44a87b;
 }
-
 
 .destacados {
   display: grid;
@@ -508,10 +495,6 @@ body {
   background-size: 40px 40px; /* Tamaño de las figuras */
 }
 
-
-
-/* === Estilos solo para la página de Ecovideos === */
-
 /* Sección de presentación Ecovideos */
 .presentacion {
   text-align: center;
@@ -568,16 +551,3 @@ body {
   font-size: 0.95em;
   color: #444;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
