@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federeco - Asistente Ecológico IA</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <!-- Botón de retorno -->
+  <button class="return-btn" onclick="window.location.href='index.html'">
+    ← Volver al inicio
+  </button>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <img src="https://i.postimg.cc/QtDLBQxY/caneca-2.webp" alt="Federeco">
+      <h2>Federeco 🌱</h2>
+      <p>Tu asistente ecológico inteligente</p>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        <div class="message-bubble">
+          ¡Hola! Soy Federeco 🌱 Tu amigo ecológico. Puedo ayudarte con preguntas sobre reciclaje, medio ambiente y sostenibilidad. ¿En qué puedo ayudarte hoy?
+        </div>
+      </div>
+    </div>
+
+    <div class="typing-indicator" id="typingIndicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="quick-buttons">
+      <button class="quick-btn" onclick="sendQuickMessage('¿Cómo reciclar plástico?')">♻️ Reciclar plástico</button>
+      <button class="quick-btn" onclick="sendQuickMessage('¿Qué va en cada caneca?')">🗑️ Canecas de colores</button>
+      <button class="quick-btn" onclick="sendQuickMessage('Consejos ecológicos')">🌍 Consejos eco</button>
+    </div>
+
+    <div class="chat-input-container">
+      <input
+        type="text"
+        class="chat-input"
+        id="chatInput"
+        placeholder="Escribe tu pregunta..."
+        onkeypress="handleKeyPress(event)"
+      >
+      <button class="send-btn" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
