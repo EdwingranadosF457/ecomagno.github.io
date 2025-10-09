@@ -4,186 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FederEco - EcoProyecto</title>
-  <link rel="stylesheet" href="nuevo.css">
-  <link rel="stylesheet" href="Responsive.css">
-  <style>
-    /* Estilos para integrar el juego sin afectar el resto */
-    #federeco-game-container {
-      margin: 40px auto;
-      max-width: 800px;
-      padding: 20px;
-      position: relative;
-    }
-    
-    .juego-seccion {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 40px 20px;
-      border-radius: 20px;
-      margin: 40px auto;
-      max-width: 900px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    
-    .juego-titulo {
-      text-align: center;
-      color: white;
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .juego-instrucciones {
-      background: rgba(255,255,255,0.9);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    
-    .juego-instrucciones h3 {
-      color: #667eea;
-      margin-bottom: 10px;
-    }
-    
-    .juego-instrucciones p {
-      color: #333;
-      margin: 5px 0;
-    }
-
-    /* Estilos del juego de Federeco */
-    #federeco-game-container .contenedor {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      margin: 0 auto;
-      position: relative;
-      background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    #federeco-game-container .suelo {
-      width: 200%;
-      height: 30px;
-      background: linear-gradient(to bottom, #8B7355 0%, #654321 100%);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-top: 3px solid #5a3d2b;
-    }
-
-    #federeco-game-container .fededino {
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      bottom: 30px;
-      left: 50px;
-      z-index: 2;
-    }
-
-    #federeco-game-container .fededino img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    #federeco-game-container .cactus {
-      width: 40px;
-      height: 60px;
-      background: #2d5016;
-      position: absolute;
-      bottom: 30px;
-      right: 0;
-      border-radius: 10px 10px 0 0;
-    }
-
-    #federeco-game-container .cactus::before {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 25px;
-      background: #2d5016;
-      left: -10px;
-      top: 10px;
-      border-radius: 5px;
-    }
-
-    #federeco-game-container .cactus::after {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 25px;
-      background: #2d5016;
-      right: -10px;
-      top: 15px;
-      border-radius: 5px;
-    }
-
-    #federeco-game-container .score,
-    #federeco-game-container .high-score {
-      position: absolute;
-      top: 15px;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      z-index: 10;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-
-    #federeco-game-container .score {
-      right: 20px;
-    }
-
-    #federeco-game-container .high-score {
-      left: 20px;
-    }
-
-    #federeco-game-container #game-over-screen {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      display: none;
-      z-index: 100;
-    }
-
-    #federeco-game-container #restart-button {
-      margin-top: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    #federeco-game-container #restart-button:hover {
-      transform: scale(1.1);
-    }
-
-    #federeco-game-container #restart-button img {
-      width: 50px;
-      height: 50px;
-    }
-
-    /* Animaciones */
-    @keyframes saltar {
-      0%, 100% { bottom: 30px; }
-      50% { bottom: 150px; }
-    }
-
-    #federeco-game-container .fededino.saltar {
-      animation: saltar 0.5s ease;
-    }
-  </style>
-</head>
-<body>
+<link rel="stylesheet" href="nuevo.css">
+<link rel="stylesheet" href="Responsive.css">
+ <body>
   <header class="header-federeco">
     <div class="logo">
       <img src="Img/M GNO.png" alt="logo-img">
@@ -197,7 +20,6 @@
       </ul>
     </nav>
   </header>
-  
   <main class="federeco-page">
     <!-- Presentación de Federeco -->
     <section class="federeco-presentacion">
@@ -207,26 +29,25 @@
       <div class="federeco-texto">
         <h2>👋 ¡Hola! Soy Federeco</h2>
         <p>
-         <strong> Soy su robot ecológico,</strong> ¡llegué para quedarme! 
-         <p>Estoy aquí para convertirme en el mejor aliado del cuidado ambiental en nuestra institución.</p>  
+         <strong> Soy su robot ecológico,</strong> ¡ llegué para quedarme! <p>
+         estoy aquí para convertirme en el mejor aliado del cuidado ambiental en nuestra institucion.</strong>  
+         </p>
         </p>
         <p>
           Juntos podemos construir un mundo más limpio y verde 🌍💚.
         </p>
       </div>
     </section>
-    
     <!-- Beneficios -->
     <section class="federeco-beneficios">
       <h2>🌿 ¿Por qué soy importante?</h2>
       <div class="beneficios-grid">
-        <div class="beneficio-card">♻️ Porque enseño cómo proteger la naturaleza y mantener limpios nuestros espacios.</div>
+        <div class="beneficio-card">♻️Porque enseño cómo proteger la naturaleza y mantener limpios nuestros espacios.</div>
         <div class="beneficio-card">🌍 Te muestro que separar los residuos ayuda a darles una nueva vida.</div>
-        <div class="beneficio-card">🤖 Porque cada acción pequeña, hace la diferencia.</div>
+        <div class="beneficio-card">🤖 Porque cada acción pequeña, hace la diferencia..</div>
         <div class="beneficio-card">✨ Inspiro a los estudiantes a innovar y cuidar la Tierra.</div>
       </div>
     </section>
-    
     <!-- Juegos -->
     <section class="federeco-juegos">
       <h2>🎮 Mis Juegos</h2>
@@ -234,59 +55,27 @@
         Además de ayudarte a reciclar, quiero que te diviertas aprendiendo.  
         Aquí encontrarás <strong>juegos interactivos</strong> sobre el cuidado del medio ambiente.  
       </p>
-      
-      <!-- Juego de Federeco Integrado -->
-      <div class="juego-seccion">
-        <h2 class="juego-titulo">🎮 ¡Juega con Federeco!</h2>
-        <div class="juego-instrucciones">
-          <h3>📋 Instrucciones:</h3>
-          <p><strong>Presiona ESPACIO</strong> o <strong>toca la pantalla</strong> para saltar</p>
-          <p>Ayuda a Federeco a esquivar los obstáculos y acumula puntos</p>
-          <p>¡Supera tu récord y conviértete en un héroe ecológico! 🌱</p>
-        </div>
-        
-        <div id="federeco-game-container">
-          <div class="contenedor">
-            <div class="suelo"></div>
-            <div class="fededino">
-              <img id="fededino-image" src="federeco.png" alt="Federeco">
-            </div>
-            <div class="high-score">RECORD: 0</div>
-            <div class="score">0</div>
-            <div id="game-over-screen">
-              GAME OVER
-              <button id="restart-button">
-                <img src="replay.png" alt="Replay">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <a href="ia.html">
-      <div class="eco-caneca" id="ecoCaneca">
-        <img src="Img/caneca 2.webp" alt="Caneca ecológica" class="caneca-img">
-        <p class="eco-texto" id="ecoTexto">🌱 Usa las canecas de colores para reciclar correctamente</p>
-      </div>
-    </a>
-  </main>
-  
-  <div class="hojas"></div>
-  
-  <script src="juegos/juego2.js"></script>
-  <script src="dino.js"></script>
-  <script>
-    // Genera hojas flotando
-    const hojasContainer = document.querySelector('.hojas');
-    for (let i = 0; i < 20; i++) {
-      let hoja = document.createElement('span');
-      hoja.className = 'hoja';
-      hoja.style.left = Math.random() * 100 + 'vw';
-      hoja.style.animationDuration = 5 + Math.random() * 5 + 's';
-      hoja.style.animationDelay = Math.random() * 5 + 's';
-      hojasContainer.appendChild(hoja);
-    }
-  </script>
+
+        <script src="juegos/juego2.js"></script>
 </body>
+ <a href="ia.html">
+<div class="eco-caneca" id="ecoCaneca">
+  <img src="Img/caneca 2.webp" alt="Caneca ecológica" class="caneca-img">
+  <p class="eco-texto" id="ecoTexto">🌱 Usa las canecas de colores para reciclar correctamente</p>
+</div>
+ </a>
+
+<div class="hojas"></div>
+<script>
+  // Genera hojas flotando
+  const hojasContainer = document.querySelector('.hojas');
+  for (let i = 0; i < 20; i++) {
+    let hoja = document.createElement('span');
+    hoja.className = 'hoja';
+    hoja.style.left = Math.random() * 100 + 'vw';
+    hoja.style.animationDuration = 5 + Math.random() * 5 + 's';
+    hoja.style.animationDelay = Math.random() * 5 + 's';
+    hojasContainer.appendChild(hoja);
+  }
+</script>
 </html>
