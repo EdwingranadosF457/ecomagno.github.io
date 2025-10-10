@@ -56,7 +56,23 @@
         Además de ayudarte a reciclar, quiero que te diviertas aprendiendo.  
         Aquí encontrarás <strong>juegos interactivos</strong> sobre el cuidado del medio ambiente.  
       </p>
+   <button id="jugar-btn" class="boton-jugar">Jugar</button>
 
+  <div id="juego-magnobot">
+    <div class="info-juego">
+      <p>Puntos: <span id="puntos">0</span></p>
+      <p>Vidas: <span id="vidas">3</span></p>
+    </div>
+
+    <div id="zona-basura"></div>
+
+    <div class="contenedor-canecas">
+      <div class="caneca" data-tipo="papel">🧻 Papel</div>
+      <div class="caneca" data-tipo="plastico">🧴 Plástico</div>
+      <div class="caneca" data-tipo="no-reciclable">🍌 No reciclable</div>
+    </div>
+  </div>
+</section>
       
 </body>
  <a href="ia.html">
@@ -83,6 +99,7 @@
         <script src="juegos/juego.js"></script>
 
 </html>
+
 
 
 
