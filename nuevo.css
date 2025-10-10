@@ -10,7 +10,7 @@
 /* Estilo general */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #2E8C35;
+  background: var(--dark-green);
   line-height: 1.6;
 }
 
@@ -43,14 +43,14 @@ header nav {
 
 .menu li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-weight: 500;
   transition: color 0.3s;
 }
 
 /* Header y Footer */
 header, footer, .header-federeco {
-  background: #8ce492;
+  background: var(--pastel-green);
   color: white;
 }
 
