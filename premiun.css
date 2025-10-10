@@ -1,0 +1,148 @@
+#jugar-btn, .boton-jugar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#jugar-btn:hover, .boton-jugar:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Contenedor principal */
+#juego-magnobot {
+  display: none;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+/* Puntuación y vidas */
+.info-juego {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.info-juego span {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Zona donde aparecen los desechos */
+#zona-basura {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 200px;
+  padding: 20px;
+  border: 2px dashed #4CAF50;
+  border-radius: 15px;
+  background-color: #f7fff8;
+}
+
+/* Objetos de basura */
+.objeto-basura {
+  width: 80px;
+  height: 80px;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+.objeto-basura:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de canecas */
+.contenedor-canecas {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.caneca {
+  width: 120px;
+  height: 150px;
+  border-radius: 15px;
+  border: 3px solid #333;
+  padding: 10px;
+  background-color: #e0e0e0;
+  transition: transform 0.3s ease, background-color 0.3s;
+  font-weight: bold;
+}
+
+.caneca:hover {
+  transform: scale(1.05);
+}
+
+/* Colores por tipo */
+.caneca[data-tipo="papel"] {
+  background-color: #81d4fa;
+  border-color: #0288d1;
+}
+.caneca[data-tipo="plastico"] {
+  background-color: #ffcc80;
+  border-color: #f57c00;
+}
+.caneca[data-tipo="no-reciclable"] {
+  background-color: #bdbdbd;
+  border-color: #616161;
+}
+
+/* Mensajes */
+.felicitacion, .perdida {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 18px;
+  animation: aparecer 0.6s ease;
+}
+
+.felicitacion {
+  background-color: #c8f7c5;
+  color: #2e7d32;
+  border: 2px solid #66bb6a;
+}
+
+.perdida {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  border: 2px solid #e57373;
+}
+
+/* Animación */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .contenedor-canecas {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .caneca {
+    width: 80%;
+  }
+
+  .objeto-basura {
+    width: 60px;
+    height: 60px;
+  }
+}
