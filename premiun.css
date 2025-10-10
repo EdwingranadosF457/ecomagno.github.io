@@ -1,47 +1,44 @@
 #jugar-btn, .boton-jugar {
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #4CAF50, #81c784);
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 14px 40px;
   border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 #jugar-btn:hover, .boton-jugar:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #43a047, #66bb6a);
   transform: scale(1.05);
 }
 
-/* Contenedor principal */
-#juego-magnobot {
+/* Contenedor del juego */
+#federeco-juego {
   display: none;
-  margin: 20px auto;
+  margin-top: 25px;
   padding: 20px;
-  max-width: 900px;
-  background-color: #fff;
+  background: #f9fff9;
+  border: 2px solid #81c784;
   border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  position: relative;
+  animation: aparecer 0.6s ease;
 }
 
-/* Puntuación y vidas */
+/* Información del juego */
 .info-juego {
   display: flex;
   justify-content: center;
   gap: 40px;
   font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.info-juego span {
   font-weight: bold;
   color: #2e7d32;
+  margin-bottom: 25px;
 }
 
-/* Zona donde aparecen los desechos */
+/* Zona de desechos */
 #zona-basura {
   display: flex;
   justify-content: center;
@@ -49,46 +46,53 @@
   gap: 20px;
   min-height: 200px;
   padding: 20px;
-  border: 2px dashed #4CAF50;
-  border-radius: 15px;
-  background-color: #f7fff8;
+  border: 3px dashed #4CAF50;
+  border-radius: 20px;
+  background-color: #f3f9f4;
 }
 
-/* Objetos de basura */
+/* Imágenes de basura */
 .objeto-basura {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   cursor: grab;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .objeto-basura:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-/* Sección de canecas */
+/* Contenedor de canecas */
 .contenedor-canecas {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 30px;
+  gap: 20px;
 }
 
+/* Canecas */
 .caneca {
-  width: 120px;
-  height: 150px;
-  border-radius: 15px;
+  width: 130px;
+  height: 160px;
+  border-radius: 18px;
   border: 3px solid #333;
-  padding: 10px;
-  background-color: #e0e0e0;
-  transition: transform 0.3s ease, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
   font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .caneca:hover {
   transform: scale(1.05);
 }
 
-/* Colores por tipo */
+/* Colores según tipo */
 .caneca[data-tipo="papel"] {
   background-color: #81d4fa;
   border-color: #0288d1;
@@ -102,12 +106,12 @@
   border-color: #616161;
 }
 
-/* Mensajes */
+/* Mensajes de felicitación o derrota */
 .felicitacion, .perdida {
-  margin-top: 30px;
+  margin-top: 35px;
   padding: 25px;
-  border-radius: 20px;
-  font-size: 18px;
+  border-radius: 18px;
+  font-size: 1.1em;
   animation: aparecer 0.6s ease;
 }
 
@@ -130,11 +134,15 @@
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  .info-juego {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .contenedor-canecas {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
   }
 
   .caneca {
@@ -142,7 +150,7 @@
   }
 
   .objeto-basura {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
   }
 }
