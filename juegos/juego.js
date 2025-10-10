@@ -9,9 +9,9 @@ let vidas = 3;
 let recolectados = [];
 
 const desechos = [
-  { id: 'papel', tipo: 'papel', src: 'img/contaminantes/papel.png', alt: 'Papel' },
-  { id: 'botella', tipo: 'plastico', src: 'img/contaminantes/botella.png', alt: 'Botella de plástico' },
-  { id: 'banana', tipo: 'no-reciclable', src: 'img/contaminantes/banana.png', alt: 'Cáscara de banana' }
+  { id: 'papel', tipo: 'papel', src: 'img/contaminacion/papel.png', alt: 'Papel' },
+  { id: 'botella', tipo: 'plastico', src: 'img/contaminacion/botella.png', alt: 'Botella de plástico' },
+  { id: 'banana', tipo: 'no-reciclable', src: 'img/contaminacion/banana.png', alt: 'Cáscara de banana' }
 ];
 
 const zonaBasura = document.getElementById('zona-basura');
