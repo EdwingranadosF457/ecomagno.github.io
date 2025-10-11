@@ -139,7 +139,7 @@ header, footer, .header-federeco {
 }
 
 .btn-hero {
-  background: #8ce492;
+  background: var(--dark-green);
   color: white;
   padding: 12px 25px;
   border-radius: 30px;
