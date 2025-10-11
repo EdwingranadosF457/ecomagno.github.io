@@ -2,12 +2,12 @@ const tablero = document.querySelector(".tablero");
 const mensaje = document.getElementById("mensaje");
 
 let cartas = [
-    "img/contaminantes/basura.png", "img/contaminantes/basura.png",
-    "img/contaminantes/Banana2.png", "img/contaminantes/Banana2.png",
-    "img/contaminantes/Desores.png", "img/contaminantes/Desores.png",
-    "img/contaminantes/Fabrica.png", "img/contaminantes/Fabrica.png",
-    "img/contaminantes/CO2.png", "img/contaminantes/CO2.png",
-    "img/contaminantes/AS.png", "img/contaminantes/AS.png"
+    "img/contaminacion/basura.png", "img/contaminacion/basura.png",
+    "img/contaminacion/Banana2.png", "img/contaminacion/Banana2.png",
+    "img/contaminacion/Desores.png", "img/contaminacion/Desores.png",
+    "img/contaminacion/Fabrica.png", "img/contaminacion/Fabrica.png",
+    "img/contaminacion/CO2.png", "img/contaminacion/CO2.png",
+    "img/contaminacion/AS.png", "img/contaminacion/AS.png"
 ];
 
 let primeraCarta = null;
