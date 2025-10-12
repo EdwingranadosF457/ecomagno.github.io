@@ -46,7 +46,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url('suelo.png') repeat-x 0px 0px;
+    background: url('Img/suelo.png') repeat-x 0px 0px;
     background-size: 50% 42px;
 }
 
@@ -105,13 +105,13 @@
 #federeco-game-container .cactus-1 {
     width: 30px;
     height: 48px;
-    background-image: url('cactus1.png');
+    background-image: url('Img/cactus1.png');
 }
 
 #federeco-game-container .cactus-2 {
     width: 50px;
     height: 48px;
-    background-image: url('cactus2.png');
+    background-image: url('Img/cactus2.png');
 }
 
 #federeco-game-container #game-over-screen {
