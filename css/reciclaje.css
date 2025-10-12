@@ -1,0 +1,156 @@
+#jugar-btn, .boton-jugar {
+  background: linear-gradient(135deg, #4CAF50, #81c784);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#jugar-btn:hover, .boton-jugar:hover {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  transform: scale(1.05);
+}
+
+/* Contenedor del juego */
+#federeco-juego {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f9fff9;
+  border: 2px solid #81c784;
+  border-radius: 20px;
+  animation: aparecer 0.6s ease;
+}
+
+/* Información del juego */
+.info-juego {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+/* Zona de desechos */
+#zona-basura {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 200px;
+  padding: 20px;
+  border: 3px dashed #4CAF50;
+  border-radius: 20px;
+  background-color: #f3f9f4;
+}
+
+/* Imágenes de basura */
+.objeto-basura {
+  width: 85px;
+  height: 85px;
+  cursor: grab;
+  transition: transform 0.25s ease;
+}
+
+.objeto-basura:hover {
+  transform: scale(1.15);
+}
+
+/* Contenedor de canecas */
+.contenedor-canecas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+/* Canecas */
+.caneca {
+  width: 130px;
+  height: 160px;
+  border-radius: 18px;
+  border: 3px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.caneca:hover {
+  transform: scale(1.05);
+}
+
+/* Colores según tipo */
+.caneca[data-tipo="papel"] {
+  background-color: #81d4fa;
+  border-color: #0288d1;
+}
+.caneca[data-tipo="plastico"] {
+  background-color: #ffcc80;
+  border-color: #f57c00;
+}
+.caneca[data-tipo="no-reciclable"] {
+  background-color: #bdbdbd;
+  border-color: #616161;
+}
+
+/* Mensajes de felicitación o derrota */
+.felicitacion, .perdida {
+  margin-top: 35px;
+  padding: 25px;
+  border-radius: 18px;
+  font-size: 1.1em;
+  animation: aparecer 0.6s ease;
+}
+
+.felicitacion {
+  background-color: #c8f7c5;
+  color: #2e7d32;
+  border: 2px solid #66bb6a;
+}
+
+.perdida {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  border: 2px solid #e57373;
+}
+
+/* Animación */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .info-juego {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contenedor-canecas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caneca {
+    width: 80%;
+  }
+
+  .objeto-basura {
+    width: 65px;
+    height: 65px;
+  }
+}
