@@ -19,7 +19,8 @@
 /* --- Tablero --- */
 .tablero {
   display: grid;
- background: url('Img/M GNO (1).png') repeat-x 0px 0px;
+  background: url('Img/M GNO (1).png') repeat-x 0px 0px;
+  grid-template-columns: repeat(4, 120px);
   gap: 15px;
   justify-content: center;
   margin: 0 auto;
