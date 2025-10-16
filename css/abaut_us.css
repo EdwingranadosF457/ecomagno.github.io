@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--dark-green);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo-img  {
+  height: 100px; 
+  width: 100px;
+  display: block;
+}
+
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Header y Footer */
+header, footer, .header-federeco {
+  background: #2E852E;
+  color: white;
+}
+
+/* Links del menú */
+.menu li a {
+  color: #f1faee;
+}
+
+.menu li a:hover {
+  color: #54d199;
+}
+
+/* Boton color*/
+.card button {
+  background: #54d199;
+}
+
+.card button:hover {
+  background: #54d199;
+}
