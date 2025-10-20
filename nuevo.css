@@ -50,7 +50,7 @@ header nav {
 
 /* Header y Footer */
 header, footer, .header-federeco {
-  background: #2E852E;
+  background: var(--dark-green);
   color: white;
 }
 
