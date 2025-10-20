@@ -47,7 +47,7 @@ header nav {
 
 /* Header y Footer */
 header, footer, .header-federeco {
-  background: #2E852E;
+  background: var(--dark-green);
   color: white;
 }
 
@@ -162,4 +162,5 @@ header, footer, .header-federeco {
   color: #52b788;
   font-weight: bold;
   border-bottom: 2px solid #52b788;
+
 }
