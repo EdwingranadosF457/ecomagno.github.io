@@ -188,7 +188,7 @@ header, footer, .header-federeco {
 /* Header */
 .header-federeco {
   background: var(--dark-green);
-  color: white;
+  color: #2e822e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -552,6 +552,7 @@ body {
   color: #444;
 
 }
+
 
 
 
