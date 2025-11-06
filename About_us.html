@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - EcoMagno</title>
+  <link rel="stylesheet" href="css/abaut_us.css">
+  <link rel="stylesheet" href="Responsive.css">
+  <style>
+    /* === ESTILO BASE ORIGINAL === */
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .about-section {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section h2 {
+      color: #2d6a4f;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #52b788;
+      padding-bottom: 10px;
+    }
+
+    /* === Imagen debajo del menú === */
+    .about-banner img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 40px;
+      border-bottom: 4px solid #52b788;
+    }
+
+    /* === Cuadros de secciones === */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 2px solid #95d5b2;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-5px);
+      background: #d8f3dc;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .section-card h3 {
+      color: #1b4332;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    /* === Popup (mini pantalla) === */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      position: relative;
+      animation: fadeIn 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .popup-content h2 {
+      color: #1b4332;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .popup-content p, .popup-content li {
+      color: #333;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* === Tarjetas de integrantes dentro del popup === */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #95d5b2;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      background: #f0fff4;
+    }
+
+    .member-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #52b788;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-card h4 {
+      color: #1b4332;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .member-card p {
+      color: #2d6a4f;
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    footer {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .section-card { padding: 30px 10px; }
+      .about-banner img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+   
+<header class="header-federeco">
+  <div class="logo">
+    <img src="Img/M GNO (1).png" alt="logo-img">
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="fede nuevo.html">Federeco</a></li>
+      <li><a href="ecov.html">Ecovideos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- === Imagen decorativa debajo del menú === -->
+<section class="about-banner">
+  <img src="Img/fede7.webp" alt="Banner EcoMagno">
+</section>
+
+<!-- === Contenedor principal === -->
+<div class="about-container">
+  <h2 style="text-align:center; color:#1b4332; margin-bottom:40px;">Secciones del Proyecto EcoMagno</h2>
+
+  <div class="sections-grid">
+    <div class="section-card" onclick="mostrarInfo('justificacion')">
+      <h3>Justificación del Proyecto</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('actividades')">
+      <h3>Actividades Promovidas</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('equipo')">
+      <h3>Nuestro Equipo</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('integrantes')">
+      <h3>Integrantes</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('tecnologias')">
+      <h3>Tecnologías Empleadas</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('recursos')">
+      <h3>Recursos Usados y Creados</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('limitaciones')">
+      <h3>Limitaciones</h3>
+    </div>
+    <div class="section-card" onclick="mostrarInfo('prospectivas')">
+      <h3>Prospectivas</h3>
+    </div>
+  </div>
+</div>
+
+<!-- === Ventana emergente === -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="cerrarInfo()">&times;</span>
+    <div id="popup-text"></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 - EcoMagno. Todos los derechos reservados.</p>
+</footer>
+
+<!-- === Script de interacción === -->
+<script>
+  const info = {
+    justificacion: `
+      <h2>Justificación del Proyecto</h2>
+      <p>EcoMagno busca generar conciencia ambiental en la comunidad educativa mediante acciones sostenibles, talleres ecológicos y proyectos de reciclaje. Este proyecto promueve el trabajo en equipo y la reflexión sobre el impacto ambiental en nuestro entorno.</p>
+    `,
+    actividades: `
+      <h2>Actividades Promovidas</h2>
+      <ul>
+        <li>Campañas de reciclaje y reforestación.</li>
+        <li>Talleres ecológicos y educativos.</li>
+        <li>Concursos ambientales escolares.</li>
+        <li>Creación de ecoafiches y murales informativos.</li>
+      </ul>
+    `,
+    equipo: `
+      <h2>Nuestro Equipo</h2>
+      <p>Conformado por estudiantes y docentes comprometidos con el medio ambiente, dedicados a promover prácticas sostenibles en el colegio San Alberto Magno.</p>
+    `,
+    integrantes: `
+      <h2>Integrantes del Proyecto</h2>
+      <div class="members-grid">
+        <div class="member-card">
+          <div class="member-avatar">1</div>
+          <h4>Jose Luis Bertel </h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">2</div>
+          <h4>Tanya Canoles</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">3</div>
+          <h4>Valeria Cantillo</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">4</div>
+          <h4>Freiman Cantillo</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">5</div>
+          <h4>Edwin Granados</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+       <div class="member-card">
+          <div class="member-avatar">5</div>
+          <h4>Angel Medina</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div> 
+        <div class="member-card">
+          <div class="member-avatar">5</div>
+          <h4>Angeles Zambrano</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+      </div>
+    `,
+    tecnologias: `
+      <h2>Tecnologías Empleadas</h2>
+      <p>Se utilizaron tecnologías web como HTML, CSS y JavaScript, junto con recursos educativos digitales para promover el aprendizaje ecológico y la difusión de mensajes ambientales.</p>
+    `,
+    recursos: `
+      <h2>Recursos Usados y Creados</h2>
+      <ul>
+        <li>Material reciclable y reutilizable.</li>
+        <li>Carteles informativos.</li>
+        <li>Videos y presentaciones creadas por los estudiantes.</li>
+        <li>Documentos digitales para difusión educativa.</li>
+      </ul>
+    `,
+    limitaciones: `
+      <h2>Limitaciones</h2>
+      <ul>
+        <li>Disponibilidad limitada de materiales ecológicos.</li>
+        <li>Poco tiempo para la implementación de todas las actividades.</li>
+        <li>Dificultades técnicas en la creación y difusión digital.</li>
+      </ul>
+    `,
+    prospectivas: `
+      <h2>Prospectivas</h2>
+      <p>EcoMagno busca fortalecer su alcance hacia toda la comunidad escolar, crear nuevas alianzas ambientales y desarrollar proyectos ecológicos a largo plazo.</p>
+      <h3>Objetivos a Corto Plazo</h3>
+      <ul>
+        <li>Ampliar las campañas de reciclaje.</li>
+        <li>Realizar jornadas de educación ambiental mensuales.</li>
+      </ul>
+      <h3>Objetivos a Largo Plazo</h3>
+      <ul>
+        <li>Consolidar un programa ambiental institucional.</li>
+        <li>Integrar tecnología sostenible en proyectos estudiantiles.</li>
+      </ul>
+    `
+  };
+
+  function mostrarInfo(seccion) {
+    document.getElementById('popup-text').innerHTML = info[seccion];
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function cerrarInfo() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

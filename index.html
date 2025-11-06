@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ecomagno</title>
+  <link rel="stylesheet" href="nuevo.css">
+  <link rel="stylesheet" href="Responsive.css">
+</head>
+<body>
+   
+<header class="header-federeco">
+    <div class="logo">
+      <img src="Img/M GNO (1).png" alt="logo-img">
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="fede nuevo.html" class="activo">Federeco</a></li>
+        <li><a href="ecov.html">Ecovideos</a></li>
+        <li><a href="About_us.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Portada principal -->
+<section class="hero">
+  <div class="hero-content">
+
+  
+    <a href="About_us.html" class="btn-hero">Conoce más</a>
+  </div>
+</section>
+<!-- inicio y Ecopride -->
+<div class="division-elegante">
+<div class="decoracion"></div>
+  <h2 class="titulo-division">PRAE</h2>
+  <div class="decoracion"></div>
+</div>
+
+
+ <!-- Sección Ecopride -->
+<section class="ecopride">
+  <div class="ecopride-contenido">
+    <div class="ecopride-imagen">
+      <img src="Img/ecopride.jpg" alt="Ecopride - Proyecto ecológico">
+    </div>
+    <div class="ecopride-texto">
+      <h2>¿Qué es el PRAE COLSAM?</h2>
+      <p>
+        Es una estrategia educativa que se desarrolla en los colegios de Colombia para promover la educación ambiental. Su objetivo es que estudiantes, docentes y comunidad aprendan a conocer, cuidar y mejorar el entorno natural mediante proyectos prácticos, actividades ecológicas y acciones sostenibles dentro y fuera de la institución
+      </p>
+    </div>
+  </div>
+
+  <div class="ecopride-valores">
+    <div class="valor">
+     <center> <img src="https://cdn-icons-png.flaticon.com/512/4299/4299933.png" alt="Visión"></center>
+      <h3>Visión</h3>
+      <p>Ser una institución comprometida con la formación de ciudadanos que protejan y valoren su entorno natural.</p>
+    </div>
+    <div class="valor">
+     <center><img src="https://cdn-icons-png.flaticon.com/512/809/809493.png" alt="Misión"></center>
+      <h3>Misión</h3>
+      <p>Fomentar en la comunidad educativa el cuidado y respeto por el medio ambiente a través de acciones y aprendizajes sostenibles.</p>
+    </div>
+    <div class="valor">
+      <center><img src="https://cdn-icons-png.flaticon.com/512/992/992638.png" alt="Propósito"> </center>
+      <h3>Propósito</h3>
+      <p>Crear conciencia ambiental y promover hábitos que contribuyan al bienestar del planeta.</p>
+      
+    </div>
+    <!-- BOTÓN PARA VER INTEGRANTES -->
+<div class="integrantes-boton">
+  <button id="btnIntegrantes">👥 Ver Integrantes</button>
+
+<div id="modalIntegrantes" class="modal">
+  <div class="modal-contenido">
+    <button id="cerrarModal" class="modal-cerrar">✖</button>
+    ...
+  
+
+
+    <h2 id="tituloModal">Integrantes del Proyecto</h2>
+
+    <div class="integrantes-grid">
+      <!-- Reemplaza imágenes/nombres/roles por los reales -->
+      <div class="integrante">
+        <img src="Img/integrante1.jpg" alt="Foto integrante 1">
+        <h3>Mvicky Caro Gallardo</h3>
+        <p>Coordinadora general</p>
+      </div>
+
+      <div class="integrante">
+        <img src="Img/integrante2.jpg" alt="Foto integrante 2">
+        <h3>C</h3>
+        <p></p>
+      </div>
+
+      <div class="integrante">
+        <img src="Img/integrante3.jpg" alt="Foto integrante 3">
+        <h3>vicky caro gallardo</h3>
+        <p>Investigación ambiental</p>
+      </div>
+    </div></div></div>
+  </div>
+</div>
+
+
+<script>
+  // Espera a que el contenido cargue
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("modalIntegrantes");
+    const btn = document.getElementById("btnIntegrantes");
+    const cerrar = document.getElementById("cerrarModal");
+
+    // Abrir modal
+    btn.addEventListener("click", () => {
+      modal.style.display = "flex";  // hace visible el modal
+      modal.style.justifyContent = "center";
+      modal.style.alignItems = "center";
+      document.body.style.overflow = "hidden"; // evita hacer scroll detrás
+    });
+
+    // Cerrar con la X
+    cerrar.addEventListener("click", () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+
+    // Cerrar al hacer clic fuera del modal
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    // Cerrar con la tecla ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display === "flex") {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  });
+</script>
+
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+  </div>
+</section>
