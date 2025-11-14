@@ -60,8 +60,20 @@
   </div>    
 </section>
 
-  <script src="menu.js"></script>
+
 </body>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.getElementById("menu-juegos");
+  const btn = document.querySelector(".dropdown-btn");
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    menu.classList.toggle("open");
+  });
+});
+</script>
 
 <footer>
   <p>© 2025 - EcoMagno. Todos los derechos reservados.</p>
@@ -69,5 +81,6 @@
 
 
 </html>
+
 
 
