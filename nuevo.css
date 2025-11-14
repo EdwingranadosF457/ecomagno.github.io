@@ -48,17 +48,6 @@ header nav {
   transition: color 0.3s;
 }
 
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
 
 
 footer{
@@ -85,31 +74,36 @@ header, .header-federeco {
   position: relative;
 }
 
+/* Botón */
+.dropdown-btn {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Menú oculto */
 .dropdown-content {
   display: none;
   position: absolute;
-  background: #2a8b3c; 
+  background: #2f8d34;
   padding: 10px 0;
-  border-radius: 6px;
-  top: 100%;
-  left: 0;
+  border-radius: 8px;
+  top: 40px;
+  right: 0;
   min-width: 150px;
 }
 
+/* Ítems */
 .dropdown-content li {
-  padding: 8px 15px;
-}
-
-.dropdown-content li a {
-  color: white;
+  padding: 10px;
 }
 
 .dropdown-content li:hover {
-  background: #256f31;
+  background: #26712b;
 }
 
-/* Mostrar menú al pasar el mouse */
-.dropdown:hover .dropdown-content {
+/* Clase cuando está abierto */
+.dropdown.open .dropdown-content {
   display: block;
 }
 
@@ -953,5 +947,6 @@ p {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
