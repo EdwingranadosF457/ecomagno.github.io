@@ -6,6 +6,9 @@
   <title>FederEco - EcoProyecto</title>
 <link rel="stylesheet" href="nuevo.css">
 <link rel="stylesheet" href="Responsive.css">
+  <link rel="stylesheet" href="css/reciclaje.css">
+<link rel="stylesheet" href="css/pares.css">
+  <link rel="stylesheet" href="nido.css">
  <body>
   <header class="header-federeco">
     <div class="logo">
@@ -48,7 +51,66 @@
         <div class="beneficio-card">✨ Inspiro a los estudiantes a innovar y cuidar la Tierra.</div>
       </div>
     </section>
-   
+
+    <!-- Juegos -->
+    <section class="federeco-juegos">
+      <h2>🎮 Mis Juegos</h2>
+      <p>
+        Además de ayudarte a reciclar, quiero que te diviertas aprendiendo.  
+        Aquí encontrarás <strong>juegos interactivos</strong> sobre el cuidado del medio ambiente.  
+      </p>
+   <button id="jugar-btn" class="boton-jugar">Jugar</button>
+
+  <div id="juego-magnobot">
+    <div class="info-juego">
+      <p>Puntos: <span id="puntos">0</span></p>
+      <p>Vidas: <span id="vidas">3</span></p>
+    </div>
+
+    <div id="zona-basura"></div>
+
+    <div class="contenedor-canecas">
+      <div class="caneca" data-tipo="papel">🧻 Papel</div>
+      <div class="caneca" data-tipo="plastico">🧴 Plástico</div>
+      <div class="caneca" data-tipo="no-reciclable">🍌 Material organico</div>
+    </div>
+  </div>
+</section>
+      
+</body>
+ <a href="ia.html">
+<div class="eco-caneca" id="ecoCaneca">
+  <img src="Img/caneca 2.webp" alt="Caneca ecológica" class="caneca-img">
+  <p class="eco-texto" id="ecoTexto">🌱 Soy FederEco, haz click aqui para hablar conmigo</p>
+</div>
+ </a>
+
+   <div id="juego2" class="juego">
+    <h3>🧠 Encuentra los pares</h3>
+    <p id="mensaje"></p>
+    <div class="tablero"></div>
+  </div>
+</section>
+
+  <div id="federeco-game-container">
+        <div class="contenedor">
+            <div class="suelo"></div>
+            <div class="fededino">
+                <img id="fededino-image" src="Img/Federeco.png" alt="Federeco">
+            </div>
+            <div class="high-score">RECORD: 0</div>
+            <div class="score">0</div>
+            <div id="game-over-screen">
+                GAME OVER
+                <button id="restart-button">
+                    <img src="Img/replay.png" alt="Replay">
+                </button>
+            </div>
+        </div>
+    </div>
+  
+    <div class="hojas"></div>
+  
 <script>
   // Genera hojas flotando
   const hojasContainer = document.querySelector('.hojas');
@@ -61,9 +123,12 @@
     hojasContainer.appendChild(hoja);
   }
 </script>
-
+<script src="juegos/juego.js"></script>
+        <script src="juegos/juego2.js"></script>
+         <script src="juegos/dino.js"></script>
 
 </html>
+
 
 
 
