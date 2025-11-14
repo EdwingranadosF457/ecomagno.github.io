@@ -48,6 +48,18 @@ header nav {
   transition: color 0.3s;
 }
 
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
 
 footer{
     margin-top:50px;
@@ -941,4 +953,5 @@ p {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
