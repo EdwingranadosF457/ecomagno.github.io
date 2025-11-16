@@ -35,31 +35,9 @@ header nav {
   align-items: center;
 }
 
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
 header, footer, .header-federeco {
   background: var(--dark-green);
   color: white;
-}
-
-/* Links del menú */
-.menu li a {
-  color: #f1faee;
-}
-
-.menu li a:hover {
-  color: #54d199;
 }
 
 .menu {
@@ -78,12 +56,12 @@ header, footer, .header-federeco {
     padding: 10px;
 }
 
-/* Evita que se vea el cuadro blanco */
+/* evita que se vea el cuadro blanco */
 .dropdown {
     position: relative;
 }
 
-/* Contenedor oculto por defecto */
+/* contenido oculto */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -97,12 +75,12 @@ header, footer, .header-federeco {
     z-index: 999;
 }
 
-/* Mostrar cuando esté abierto */
+/* mostrar cuando esté abierto */
 .dropdown.open .dropdown-content {
     display: block;
 }
 
-/* Estilos internos */
+/* estilos internos */
 .dropdown-content li {
     list-style: none;
 }
@@ -958,6 +936,7 @@ p {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
 
