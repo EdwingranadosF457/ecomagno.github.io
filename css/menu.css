@@ -1,60 +1,43 @@
-/* Contenedor del item del menú */
 .dropdown {
   position: relative;
-  z-index: 9999;
 }
 
-/* Botón del menú */
 .dropdown-btn {
-  background: none;
+  background: transparent;
   border: none;
-  color: inherit;
-  font-size: inherit;
-  padding: 0;
-  margin: 0;
+  color: white;         /* Cambia si tu texto es de otro color */
+  font-size: 1rem;
   cursor: pointer;
 }
 
-/* Contenedor del submenú */
 .dropdown-content {
+  display: none;
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 0;
-  width: 140px;
-  background: #ffffff;
-  list-style: none;
+  background: white;
+  min-width: 120px;
   padding: 0;
-  margin: 6px 0 0 0;
-  border-radius: 6px;
+  margin: 0;
+  list-style: none;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-
-  /* Para evitar el cuadro blanco visible antes de clic */
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .25s ease-in-out;
+  z-index: 100;
 }
 
-/* Items del submenú */
-.dropdown-content li a {
+/* Mostrar cuando esté activo */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Links del menú */
+.dropdown-content a {
   display: block;
   padding: 10px;
+  color: black;
   text-decoration: none;
-  color: #000;
 }
 
-/* Efecto hover de los items */
-.dropdown-content li a:hover {
-  background: #e6e6e6;
-}
-
-/* Estado cuando el menú está abierto */
-.dropdown.open .dropdown-content {
-  visibility: visible;
-  opacity: 1;
-}
-
-.dropdown-content li a:hover {
-    background: #e2e2e2;
+.dropdown-content a:hover {
+  background: #eee;
 }
