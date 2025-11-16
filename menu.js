@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   button.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    e.stopPropagation(); 
+    e.preventDefault();
+    e.stopPropagation();
     dropdown.classList.toggle("open");
   });
 
-  document.addEventListener("click", () => {
-    dropdown.classList.remove("open");
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
   });
 });
