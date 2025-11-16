@@ -119,6 +119,33 @@ header, footer, .header-federeco {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  min-width: 120px;
+  padding: 5px 0;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+}
+
+/* Mostrar cuando está abierto */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Botón estilo menú */
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white; /* Cambia si tu menú es oscuro */
+  font-size: 16px;
+  cursor: pointer;
+  padding: 14px;
+}
+
 /* Boton color*/
 .card button {
   background: #54d199;
@@ -959,6 +986,7 @@ p {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
 
