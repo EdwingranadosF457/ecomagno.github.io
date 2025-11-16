@@ -54,3 +54,7 @@
   visibility: visible;
   opacity: 1;
 }
+
+.dropdown-content li a:hover {
+    background: #e2e2e2;
+}
