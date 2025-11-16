@@ -1,50 +1,41 @@
-
-.menu ul li {
+.menu ul {
   position: relative;
 }
 
-/* Botón */
-.dropdown-btn {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  padding: 5px 10px;
+.menu ul li.dropdown {
+  position: relative; /* El menú se alineará con este elemento */
 }
 
-/* Contenedor del dropdown */
+/* Asegura que no se desplace del botón */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 35px; /* distancia hacia abajo */
-  left: 0;
+  top: 38px;           /* Baja el cuadro debajo del texto */
+  left: 0;             /* Se pega al borde del botón */
   background: white;
-  min-width: 130px;
-  list-style: none;
-  border-radius: 6px;
-  overflow: hidden;
+  min-width: 140px;
   padding: 0;
   margin: 0;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-  z-index: 9999;
+  list-style: none;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
 }
 
-/* Mostrar cuando está activo */
+/* Cuando está abierto */
 .dropdown.open .dropdown-content {
   display: block;
 }
 
-/* Estilo interior */
 .dropdown-content li a {
-  padding: 10px;
   display: block;
-  text-decoration: none;
+  padding: 10px 12px;
   color: black;
-  text-align: left;
+  text-decoration: none;
   font-size: 0.95rem;
 }
 
 .dropdown-content li a:hover {
-  background: #f2f2f2;
+  background: #f3f3f3;
 }
