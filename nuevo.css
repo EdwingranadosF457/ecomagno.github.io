@@ -61,7 +61,6 @@ header, footer, .header-federeco {
 .menu li a:hover {
   color: #54d199;
 }
-
 .menu ul {
   list-style: none;
   display: flex;
@@ -73,6 +72,15 @@ header, footer, .header-federeco {
 
 .menu ul li {
   position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 14px 0;
 }
 
 .dropdown-content {
@@ -100,7 +108,8 @@ header, footer, .header-federeco {
   border-radius: 5px;
 }
 
-.dropdown:hover .dropdown-content {
+/* visible cuando se abre con JS */
+.dropdown.open .dropdown-content {
   display: block;
   animation: fade 0.25s ease;
 }
@@ -109,7 +118,6 @@ header, footer, .header-federeco {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 
 /* Boton color*/
 .card button {
@@ -951,6 +959,7 @@ p {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
 
