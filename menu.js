@@ -1,14 +1,15 @@
-const dropdown = document.querySelector('.dropdown');
-const btn = document.querySelector('.dropdown-btn');
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.querySelector(".dropdown");
+    const button = document.querySelector(".dropdown-btn");
 
-btn.addEventListener('click', (e) => {
-  e.stopPropagation(); // evita que se cierre inmediatamente
-  dropdown.classList.toggle('open');
-});
+    // abrir / cerrar con clic
+    button.addEventListener("click", (e) => {
+        e.stopPropagation(); // evita que el documento lo cierre inmediatamente
+        dropdown.classList.toggle("open");
+    });
 
-// cerrar si se hace clic fuera
-document.addEventListener('click', (e) => {
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove('open');
-  }
+    // cerrar al hacer clic fuera
+    document.addEventListener("click", () => {
+        dropdown.classList.remove("open");
+    });
 });
