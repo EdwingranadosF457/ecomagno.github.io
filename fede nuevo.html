@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FederEco - EcoProyecto</title>
-<link rel="stylesheet" href="css/nuevo.css">
-<link rel="stylesheet" href="css/Responsive.css">
+  <link rel="stylesheet" href="css/nuevo.css">
+  <link rel="stylesheet" href="css/Responsive.css">
   <link rel="stylesheet" href="css/reciclaje.css">
-<link rel="stylesheet" href="css/pares.css">
+  <link rel="stylesheet" href="css/pares.css">
   <link rel="stylesheet" href="css/nido.css">
+</head>
  <body>
   <header class="header-federeco">
     <div class="logo">
@@ -111,21 +112,10 @@
   
     <div class="hojas"></div>
   
-<script>
-  // Genera hojas flotando
-  const hojasContainer = document.querySelector('.hojas');
-  for (let i = 0; i < 20; i++) {
-    let hoja = document.createElement('span');
-    hoja.className = 'hoja';
-    hoja.style.left = Math.random() * 100 + 'vw';
-    hoja.style.animationDuration = 5 + Math.random() * 5 + 's';
-    hoja.style.animationDelay = Math.random() * 5 + 's';
-    hojasContainer.appendChild(hoja);
-  }
-</script>
-<script src="juegos/juego.js"></script>
-        <script src="juegos/juego2.js"></script>
-         <script src="juegos/dino.js"></script>
+<script src="js/ambiente.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/juego2.js"></script>
+<script src="js/dino.js"></script>
 
 </html>
 
