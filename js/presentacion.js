@@ -59,6 +59,13 @@ const info = {
           <p>.</p>
         </div>
       </div>
+      <div class="member-card">
+          <div class="member-avatar"><img src="Img/EcoPrae"></div>
+          <h4>EcoPrae</h4>
+          <p><strong>Rol:</strong> </p>
+          <p>.</p>
+        </div>
+      </div>
     `,
     tecnologias: `
       <h2>Tecnologías Empleadas</h2>
