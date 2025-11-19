@@ -20,49 +20,47 @@ const info = {
           <div class="member-avatar"><img src="Img/Jose.webp"></div>
           <h4>Jose Luis Bertel </h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Tanya.webp"></div>
           <h4>Tanya Canoles</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Valeria.webp"></div>
           <h4>Valeria Cantillo</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Freiman.webp"></div>
           <h4>Freiman Cantillo</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Edwin.webp"></div>
           <h4>Edwin Granados</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
        <div class="member-card">
           <div class="member-avatar"><img src="Img/Medina.webp"></div>
           <h4>Angel Medina</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div> 
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Angeles.webp"></div>
           <h4>Angeles Zambrano</h4>
           <p><strong>Rol:</strong> </p>
-          <p>.</p>
+          <p>Desarrollador Integral Tecnológico y Ambiental</p>
         </div>
         <div class="member-card">
           <div class="member-avatar"><img src="Img/EcoPrae.webp"></div>
           <h4>EcoPrae</h4>
-          <p><strong>Rol:</strong> </p>
-          <p>.</p>
         </div>
       </div>
 
@@ -112,4 +110,5 @@ const info = {
 
   function cerrarInfo() {
     document.getElementById('popup').style.display = 'none';
+
   }
