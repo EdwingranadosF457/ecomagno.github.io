@@ -1,170 +1,122 @@
-const knowledgeBase = {
-      reciclaje: {
-        plastico: "El plástico va en la caneca BLANCA. Recuerda lavar los envases antes de depositarlos. Incluye: botellas, envases, bolsas limpias y empaques plásticos.",
-        papel: "El papel y cartón van en la caneca GRIS. Incluye: periódicos, revistas, cajas de cartón, cuadernos sin espiral. ¡Recuerda que el papel sucio no se recicla!",
-        organico: "Los residuos orgánicos van en la caneca VERDE. Incluye: restos de comida, cáscaras de frutas, verduras, café, té. Estos se convierten en abono o compost.",
-        vidrio: "El vidrio va en la caneca BLANCA junto con plásticos y metales. Incluye: botellas, frascos, envases de vidrio. ¡Cuidado con vidrios rotos, envuélvelos primero!",
-        metal: "Los metales van en la caneca BLANCA. Incluye: latas de aluminio, conservas, aerosoles vacíos, tapas metálicas.",
-        peligrosos: "Los residuos peligrosos necesitan tratamiento especial: pilas, baterías, medicamentos vencidos, aceites, electrónicos. Llévalos a puntos de recolección especiales."
-      },
-      canecas: {
-        blanca: "CANECA BLANCA: Para plástico, vidrio y metales. Todo lo que sea reciclable de estos materiales.",
-        gris: "CANECA GRIS: Para papel y cartón. Periódicos, cajas, documentos, revistas.",
-        verde: "CANECA VERDE: Para residuos orgánicos. Comida, restos vegetales, cáscaras.",
-        negra: "CANECA NEGRA: Para residuos no aprovechables. Todo lo que no se puede reciclar ni compostar."
-      },
-      consejos: [
-        "🌊 Reduce el uso de plásticos de un solo uso. Lleva tu propia botella reutilizable.",
-        "💡 Apaga las luces cuando no las uses. Ahorra energía y dinero.",
-        "🚰 Cierra el grifo mientras te cepillas los dientes. Ahorras hasta 12 litros de agua.",
-        "🛍️ Usa bolsas reutilizables para hacer compras. Evita las bolsas plásticas.",
-        "🌳 Planta árboles o cuida las plantas. Producen oxígeno y limpian el aire.",
-        "🚲 Usa bicicleta o camina para distancias cortas. Reduces emisiones de CO2.",
-        "📦 Reutiliza cajas y envases. Dale una segunda vida a los materiales.",
-        "🍴 Evita desperdiciar comida. Compra solo lo necesario y aprovecha sobras.",
-        "♻️ Separa correctamente tus residuos. Facilita el proceso de reciclaje.",
-        "🌞 Aprovecha la luz natural. Abre cortinas antes de encender luces."
-      ],
-      datos: [
-        "📊 Cada colombiano genera aproximadamente 0.5 kg de basura al día.",
-        "🌍 El 90% de los residuos que producimos se pueden reciclar o reutilizar.",
-        "⏰ Una botella de plástico tarda 450 años en degradarse naturalmente.",
-        "🌊 El 80% de la contaminación marina proviene de actividades terrestres.",
-        "🌳 Un árbol puede absorber hasta 22 kg de CO2 al año.",
-        "♻️ Reciclar una tonelada de papel salva 17 árboles.",
-        "💡 Una bombilla LED consume 80% menos energía que una incandescente.",
-        "🚰 El 70% del agua dulce del planeta está congelada en glaciares."
-      ]
-    };
+<script>
+(function() {
+  // Encapsular todo en una función para evitar conflictos
+  'use strict';
+  
+  // Variables del chatbot
+  const ecoCanecaChat = document.getElementById('ecoCaneca');
+  const chatbotModalEl = document.getElementById('chatbot-modal');
+  const chatbotCloseBtn = document.querySelector('.chatbot-close');
+  const chatbotMessagesEl = document.getElementById('chatbot-messages');
+  const chatbotInputEl = document.getElementById('chatbot-input');
+  const chatbotSendBtn = document.getElementById('chatbot-send');
 
-    function addMessage(text, isUser = false) {
-      const messagesContainer = document.getElementById('chatMessages');
-      const messageDiv = document.createElement('div');
-      messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
-     
-      const bubbleDiv = document.createElement('div');
-      bubbleDiv.className = 'message-bubble';
-      bubbleDiv.textContent = text;
-     
-      messageDiv.appendChild(bubbleDiv);
-      messagesContainer.appendChild(messageDiv);
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  // Verificar que los elementos existan
+  if (!ecoCanecaChat || !chatbotModalEl || !chatbotCloseBtn || !chatbotMessagesEl || !chatbotInputEl || !chatbotSendBtn) {
+    console.error('Faltan elementos del chatbot en el DOM');
+    return;
+  }
+
+  // Abrir modal al hacer clic en la caneca
+  ecoCanecaChat.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    chatbotModalEl.classList.add('active');
+    chatbotInputEl.focus();
+  });
+
+  // Cerrar modal con el botón X
+  chatbotCloseBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    chatbotModalEl.classList.remove('active');
+  });
+
+  // Cerrar al hacer clic fuera del contenedor
+  chatbotModalEl.addEventListener('click', function(e) {
+    if (e.target === chatbotModalEl) {
+      chatbotModalEl.classList.remove('active');
     }
+  });
 
-    function showTyping() {
-      document.getElementById('typingIndicator').classList.add('show');
-      const messagesContainer = document.getElementById('chatMessages');
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    }
+  // Consejos ambientales predefinidos
+  const consejosAmbientales = {
+    'reciclaje': '♻ Para reciclar correctamente: separa papel, plástico y vidrio en contenedores diferentes. Limpia los envases antes de reciclarlos.',
+    'plastico': '🧴 Reduce el uso de plásticos de un solo uso. Prefiere botellas reutilizables y bolsas de tela.',
+    'agua': '💧 Ahorra agua cerrando el grifo mientras te cepillas los dientes y reparando fugas. Una gota por segundo desperdicia 30 litros al mes.',
+    'energia': '💡 Apaga las luces cuando no las uses y desconecta aparatos electrónicos. Usa bombillas LED que consumen menos energía.',
+    'papel': '📄 Usa ambos lados del papel y recicla hojas usadas. Reduce impresiones innecesarias.',
+    'organico': '🍌 Los residuos orgánicos pueden convertirse en compost para plantas. Separa cáscaras y restos de comida.',
+    'contaminar': '🌍 Evita tirar basura en la calle o naturaleza. Usa los contenedores adecuados.',
+    'arbol': '🌳 Los árboles purifican el aire y dan oxígeno. Planta árboles y cuida las zonas verdes.',
+    'transporte': '🚲 Usa bicicleta o camina para distancias cortas. Reduce las emisiones de CO2.',
+    'bolsa': '🛍 Lleva siempre bolsas reutilizables al hacer compras. Una bolsa de tela puede usarse cientos de veces.',
+    'basura': '🗑 Separa correctamente tus residuos: orgánicos, reciclables y no reciclables. Esto facilita su tratamiento.',
+    'ambiente': '🌿 Cuidar el ambiente es responsabilidad de todos. Pequeñas acciones diarias hacen gran diferencia.',
+    'naturaleza': '🦋 Respeta la flora y fauna. No maltrates plantas ni animales, ellos son parte del ecosistema.',
+    'contaminacion': '☠ La contaminación daña el aire, agua y suelo. Evita usar productos químicos innecesarios.'
+  };
 
-    function hideTyping() {
-      document.getElementById('typingIndicator').classList.remove('show');
-    }
+  // Función para agregar mensaje al chat
+  function agregarMensaje(texto, esUsuario) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message ' + (esUsuario ? 'user-message' : 'bot-message');
+    messageDiv.textContent = texto;
+    chatbotMessagesEl.appendChild(messageDiv);
+    chatbotMessagesEl.scrollTop = chatbotMessagesEl.scrollHeight;
+  }
 
-    function getBotResponse(userMessage) {
-      const msg = userMessage.toLowerCase();
-     
-      if (msg.match(/hola|buenos días|buenas tardes|buenas noches|hey|qué tal/)) {
-        return "¡Hola! 👋 Estoy aquí para ayudarte con temas de reciclaje y medio ambiente. ¿Qué te gustaría saber?";
-      }
-     
-      if (msg.includes('plástico') || msg.includes('plastico')) {
-        return knowledgeBase.reciclaje.plastico;
-      }
-      if (msg.includes('papel') || msg.includes('cartón') || msg.includes('carton')) {
-        return knowledgeBase.reciclaje.papel;
-      }
-      if (msg.includes('orgánico') || msg.includes('organico') || msg.includes('comida') || msg.includes('cáscara')) {
-        return knowledgeBase.reciclaje.organico;
-      }
-      if (msg.includes('vidrio')) {
-        return knowledgeBase.reciclaje.vidrio;
-      }
-      if (msg.includes('metal') || msg.includes('lata')) {
-        return knowledgeBase.reciclaje.metal;
-      }
-      if (msg.includes('pila') || msg.includes('batería') || msg.includes('peligroso') || msg.includes('medicamento')) {
-        return knowledgeBase.reciclaje.peligrosos;
-      }
-     
-      if (msg.includes('caneca blanca') || msg.includes('blanca')) {
-        return knowledgeBase.canecas.blanca;
-      }
-      if (msg.includes('caneca gris') || msg.includes('gris')) {
-        return knowledgeBase.canecas.gris;
-      }
-      if (msg.includes('caneca verde') || msg.includes('verde')) {
-        return knowledgeBase.canecas.verde;
-      }
-      if (msg.includes('caneca negra') || msg.includes('negra')) {
-        return knowledgeBase.canecas.negra;
-      }
-      if (msg.includes('caneca') || msg.includes('color')) {
-        return "🗑️ Sistema de canecas:\n\n" +
-               "🤍 BLANCA: Plástico, vidrio, metales\n" +
-               "⚪ GRIS: Papel y cartón\n" +
-               "💚 VERDE: Residuos orgánicos\n" +
-               "🖤 NEGRA: No aprovechables\n\n" +
-               "¿Sobre cuál quieres saber más?";
-      }
-     
-      if (msg.includes('consejo') || msg.includes('tip') || msg.includes('ayuda')) {
-        const randomConsejo = knowledgeBase.consejos[Math.floor(Math.random() * knowledgeBase.consejos.length)];
-        return randomConsejo;
-      }
-     
-      if (msg.includes('dato') || msg.includes('información') || msg.includes('sabías')) {
-        const randomDato = knowledgeBase.datos[Math.floor(Math.random() * knowledgeBase.datos.length)];
-        return randomDato;
-      }
-     
-      if (msg.includes('recicl') || msg.includes('cómo') || msg.includes('como')) {
-        return "Para reciclar correctamente:\n\n1. Separa tus residuos por tipo\n2. Limpia los envases antes de depositarlos\n3. No mezcles diferentes tipos de residuos\n4. Usa las canecas de colores correctamente\n\n¿Qué material específico quieres reciclar?";
-      }
-     
-      if (msg.includes('medio ambiente') || msg.includes('ecología') || msg.includes('sostenible')) {
-        return "🌍 Cuidar el medio ambiente es responsabilidad de todos. Pequeñas acciones como reciclar, ahorrar agua y energía, usar menos plástico y plantar árboles hacen una gran diferencia. ¿Quieres consejos específicos?";
-      }
-     
-      if (msg.match(/gracias|chao|adiós|adios|bye|hasta luego/)) {
-        return "¡De nada! 🌱 Recuerda: pequeñas acciones, grandes cambios. ¡Hasta pronto!";
-      }
-     
-      return "Puedo ayudarte con:\n\n♻️ Cómo reciclar diferentes materiales\n🗑️ Qué va en cada caneca de colores\n🌱 Consejos para cuidar el medio ambiente\n📊 Datos interesantes sobre ecología\n\n¿Sobre qué te gustaría saber?";
-    }
-
-    function sendMessage() {
-      const input = document.getElementById('chatInput');
-      const message = input.value.trim();
-     
-      if (message === '') return;
-     
-      addMessage(message, true);
-      input.value = '';
-     
-      showTyping();
-     
-      setTimeout(() => {
-        hideTyping();
-        const response = getBotResponse(message);
-        addMessage(response);
-      }, 1000 + Math.random() * 1000);
-    }
-
-    function sendQuickMessage(message) {
-      addMessage(message, true);
-     
-      showTyping();
-     
-      setTimeout(() => {
-        hideTyping();
-        const response = getBotResponse(message);
-        addMessage(response);
-      }, 1000 + Math.random() * 1000);
-    }
-
-    function handleKeyPress(event) {
-      if (event.key === 'Enter') {
-        sendMessage();
+  // Función para obtener respuesta del bot
+  function obtenerRespuesta(pregunta) {
+    const preguntaLower = pregunta.toLowerCase();
+    
+    // Buscar palabras clave en la pregunta
+    for (let clave in consejosAmbientales) {
+      if (preguntaLower.includes(clave)) {
+        return consejosAmbientales[clave];
       }
     }
+    
+    // Respuestas para saludos
+    if (preguntaLower.includes('hola') || preguntaLower.includes('buenos') || preguntaLower.includes('buenas')) {
+      return '¡Hola! 👋 ¿En qué puedo ayudarte con el cuidado del medio ambiente?';
+    }
+    
+    if (preguntaLower.includes('gracias') || preguntaLower.includes('gracias')) {
+      return '¡De nada! 💚 Recuerda que cada pequeña acción cuenta para cuidar nuestro planeta.';
+    }
+
+    if (preguntaLower.includes('adios') || preguntaLower.includes('chao')) {
+      return '¡Hasta pronto! 👋 Sigue cuidando el planeta 🌍💚';
+    }
+    
+    // Respuesta por defecto
+    return '🌱 Puedo darte consejos sobre: reciclaje, agua, energía, plástico, papel, residuos orgánicos, árboles, transporte, bolsas y más. ¿Sobre qué quieres aprender?';
+  }
+
+  // Enviar mensaje
+  function enviarMensaje() {
+    const mensaje = chatbotInputEl.value.trim();
+    
+    if (mensaje === '') return;
+    
+    // Agregar mensaje del usuario
+    agregarMensaje(mensaje, true);
+    chatbotInputEl.value = '';
+    
+    // Simular tiempo de respuesta del bot
+    setTimeout(function() {
+      const respuesta = obtenerRespuesta(mensaje);
+      agregarMensaje(respuesta, false);
+    }, 500);
+  }
+
+  // Event listeners para enviar mensaje
+  chatbotSendBtn.addEventListener('click', enviarMensaje);
+
+  chatbotInputEl.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      enviarMensaje();
+    }
+  });
+
+})();
