@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FederEco - EcoProyecto</title>
-  <link rel="stylesheet" href="nuevo.css">
-  <link rel="stylesheet" href="Responsive.css">
-  <link rel="stylesheet" href="css/dino.css">
+  <link rel="stylesheet" href="css/nuevo.css">
+  <link rel="stylesheet" href="css/Responsive.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/chat.css">
   <style>
     #federeco-game-container {
       margin: 40px auto;
@@ -112,12 +114,23 @@
 </section>
       
 </body>
- <a href="ia.html">
-<div class="eco-caneca" id="ecoCaneca">
-  <img src="Img/caneca 2.webp" alt="Caneca ecológica" class="caneca-img">
-  <p class="eco-texto" id="ecoTexto">🌱 Soy FederEco, haz click aqui para hablar conmigo</p>
+ <div id="chatbot-modal" class="chatbot-modal">
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>🌱 FederEco - Consejos Ambientales</h3>
+      <button class="chatbot-close">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="message bot-message">
+        ¡Hola! 👋 Soy FederEco. Pregúntame sobre reciclaje, cuidado ambiental, y cómo proteger nuestro planeta 🌍💚
+      </div>
+    </div>
+    <div class="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Escribe tu pregunta..." />
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
 </div>
- </a>
 
 <footer>
   <p>© 2025 - EcoMagno. Todos los derechos reservados.</p>
