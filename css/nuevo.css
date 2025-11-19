@@ -704,6 +704,109 @@ body {
 
 
 
+.federeco-accion,
+.federeco-mision,
+.federeco-ayuda {
+  padding: 50px 20px;
+  background: #e9f8ef;
+  border-radius: 20px;
+  margin: 40px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.federeco-accion h2,
+.federeco-mision h2,
+.federeco-ayuda h2 {
+  text-align: center;
+  color: #1b5e20;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* GRID DE TARJETAS */
+.accion-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.accion-card {
+  background: white;
+  width: 260px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  border-bottom: 6px solid #4caf50;
+}
+
+.accion-card:hover {
+  transform: translateY(-10px);
+}
+
+.accion-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.accion-card h3 {
+  font-size: 1.3rem;
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.accion-card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* MI MISIÓN */
+.federeco-mision p {
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* AYÚDAME */
+.lista-ayuda {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.lista-ayuda li {
+  background: #c8f3d2;
+  padding: 12px 15px;
+  margin: 10px auto;
+  width: 80%;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+.ayuda-frase {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #388e3c;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1260,3 +1363,4 @@ p {
     font-size: 1rem;
     color: #4a4a4a;
 }
+
