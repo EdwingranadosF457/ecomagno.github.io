@@ -12,12 +12,9 @@ const info = {
         <li>Creación de ecoafiches y murales informativos.</li>
       </ul>
     `,
-    equipo: `
-      <h2>Nuestro Equipo</h2>
-      <p>Conformado por estudiantes y docentes comprometidos con el medio ambiente, dedicados a promover prácticas sostenibles en el colegio San Alberto Magno.</p>
-    `,
     integrantes: `
-      <h2>Integrantes del Proyecto</h2>
+      <h2>Nuestro equipo</h2>
+      <p>Conformado por estudiantes y docentes comprometidos con el medio ambiente, dedicados a promover prácticas sostenibles en el colegio San Alberto Magno.</p>
       <div class="members-grid">
         <div class="member-card">
           <div class="member-avatar"><img src="Img/Jose.webp"></div>
