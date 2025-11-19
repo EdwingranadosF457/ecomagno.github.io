@@ -1,5 +1,3 @@
-
-
 /* Reset básico */
 * {
   margin: 0;
@@ -80,45 +78,227 @@ header, footer, .header-federeco {
   animation: float 3s infinite ease-in-out;
   display: block;
   margin: 0 auto 10px;
+
 }
-/* ==== Hero ==== */
-.hero {
-  background: url("Img/Fuente.webp") no-repeat center/cover;
-  color: white;
-  text-align: center;
-  padding: 250px 100px;
-  position: relative;
+/* --- MENÚ PRINCIPAL --- */
+.nav-eco {
+    background:#2E852E;
+    width: 100%;
 }
 
-/* --- BOTÓN PRINCIPAL DEL INICIO --- */
+.eco-menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.eco-menu > li {
+    position: relative;
+}
+
+.eco-menu > li > a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- SUBMENÚ (oculto siempre por defecto) --- */
+.eco-submenu {
+    display: none !important;     
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background:  #2E852E;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 160px;
+    border-radius: 5px;
+}
+
+.eco-submenu li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- SOLO APARECE CON HOVER --- */
+.eco-submenu-parent:hover > .eco-submenu {
+    display: block !important;      
+}
+/* --- EFECTO HOVER EN LOS BOTONES DEL MENÚ --- */
+.eco-menu > li > a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Línea que aparece bajo el texto */
+.eco-menu > li > a::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;       /* Ajusta la altura del subrayado */
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #80ed99;   /* Color del subrayado */
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Hover: cambia color + aparece línea */
+.eco-menu > li > a:hover {
+    color: #95f3b9;    /* Color cuando pasas el mouse */
+}
+
+.eco-menu > li > a:hover::after {
+    width: 100%;
+}
+/* --- MENÚ FIJO (STICKY) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;      /* Permite que el menú quede por encima de todo */
+}
+/* ===== MENÚ PROFESIONAL CENTRADO ===== */
+
+header {
+    width: 100%;
+    background: var(--dark-green);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* CENTRA TODO EL MENÚ */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;  /* Separación elegante entre opciones */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada elemento */
+nav ul li {
+    position: relative;
+}
+
+/* Estilo de los links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all .3s ease;
+}
+
+/* Hover bonito */
+nav ul li a:hover {
+    background: #ffffff33;
+    color: #d8f3dc;
+}
+
+/* ===== SUBMENÚ (Juegos) ===== */
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: var(--dark-green);
+    padding: 10px 0;
+    border-radius: 10px;
+    min-width: 150px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+nav ul li:hover .submenu {
+    display: block; /* Aparece SOLO cuando pasas el mouse */
+}
+
+.submenu li {
+    padding: 8px 20px;
+}
+
+.submenu li a {
+    display: block;
+    width: 100%;
+}
+
+.submenu li a:hover {
+    background: #ffffff22;
+}
+
+
+
+/* ---------------------------- */
+/*          HERO VIDEO          */
+/* ---------------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px;   /* Puedes cambiarlo */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+  z-index: -1;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Contenido centrado del HERO */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* ---------------------------- */
+/*        BOTon       */
+/* ---------------------------- */
 .btn-hero {
+  display: inline-block;
   background: linear-gradient(135deg, #2e8b57, #3cb371);
   color: white;
-  font-family: "Poppins", sans-serif;
+  padding: 14px 36px;
   font-size: 1.3rem;
   font-weight: 600;
-  padding: 14px 36px;
-  border: none;
+  text-decoration: none;
   border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   box-shadow: 0 6px 20px rgba(46, 139, 87, 0.3);
-  letter-spacing: 1px;
 }
 
-/* Efecto al pasar el mouse */
 .btn-hero:hover {
   background: linear-gradient(135deg, #3cb371, #2e8b57);
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
 }
-
-/* Efecto al presionar */
-.btn-hero:active {
-  transform: scale(0.98);
-  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
-}
-
 
 .destacados {
   display: grid;
@@ -649,13 +829,6 @@ body {
   letter-spacing: 1px;
 }
 
-
-
-
-
-
-
-
 /* Fuente profesional y moderna */
 body {
   font-family: 'Poppins', sans-serif;
@@ -886,7 +1059,105 @@ p {
 
 
 
+/* HERO */
 
 
 
 
+
+
+
+
+/* 🌿 SECCIÓN INFANTIL AMBIENTAL */
+.kids-section {
+    padding: 60px 25px;
+    background: #e8f7ef;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo decorativo */
+.kids-section::before,
+.kids-section::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    background: #a5e6b8;
+    opacity: 0.35;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.kids-section::before {
+    top: -50px;
+    left: -40px;
+}
+
+.kids-section::after {
+    bottom: -60px;
+    right: -40px;
+}
+
+/* Título */
+.kids-title {
+    font-size: 2.6rem;
+    color: #1b5e20;
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Subtítulo */
+.kids-subtitle {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+/* Tarjetas */
+.kids-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.kids-card {
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    transition: 0.35s ease-in-out;
+    border-bottom: 6px solid #4caf50;
+}
+
+.kids-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Imágenes */
+.kids-card img {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 15px;
+}
+
+/* Títulos de tarjetas */
+.kids-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+/* Texto */
+.kids-card p {
+    font-size: 1rem;
+    color: #4a4a4a;
+}
